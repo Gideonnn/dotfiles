@@ -7,9 +7,9 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Hombrew and apps
-#source ./.brew
+source ./homebrew/install.sh
 
 # Set MacOS preferences
-#source ./.macos
+source ./macos/install.sh
 
 echo "Done, enjoy!"
