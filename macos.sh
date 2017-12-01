@@ -1,12 +1,26 @@
+#!/bin/bash
+
+# Ask for the administrator password upfront.
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+###############################################################################
+# Settings                                                                    #
+###############################################################################
+
+COMPUTERNAME="Gideon's MacBook Pro"
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Gideon's MacBook Pro"
-sudo scutil --set HostName "Gideon's MacBook Pro"
-sudo scutil --set LocalHostName "Gideon's MacBook Pro"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Gideon's MacBook Pro"
+sudo scutil --set ComputerName $COMPUTERNAME
+sudo scutil --set HostName $COMPUTERNAME
+sudo scutil --set LocalHostName $COMPUTERNAME
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTERNAME
 
 # Set standby delay to 24 hours (default is 1 hour or 3600)
 sudo pmset -a standbydelay 86400
@@ -96,7 +110,6 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
-# You might want to disable these if you are not running an SSD               #
 ###############################################################################
 
 # Disable local Time Machine snapshots
