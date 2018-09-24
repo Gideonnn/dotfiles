@@ -1,4 +1,4 @@
-#!/bin/bashgit
+#!/bin/bash
 
 if ! xcode-select --print-path &> /dev/null; then
 
