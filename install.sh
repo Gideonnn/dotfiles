@@ -15,6 +15,9 @@ xcode-select --install
 # Install Hombrew and apps
 source ./brew.sh
 
+# Set Vim preferences
+source ./vim.sh
+
 # Set MacOS preferences
 source ./macos.sh
 
