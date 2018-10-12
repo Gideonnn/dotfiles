@@ -31,16 +31,9 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 
-# Install other useful binaries.
-brew install ack
-brew install dark-mode
+# Install Git
 brew install git
 brew install git-extras
-brew install imagemagick --with-webp
-brew install lua
-brew install ssh-copy-id
-brew install tree
-brew install pandoc
 
 # Install Cask
 brew install caskroom/cask/brew-cask
