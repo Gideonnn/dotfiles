@@ -36,7 +36,6 @@ brew install git
 brew install git-extras
 
 # Install Cask
-brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
 # Core casks
