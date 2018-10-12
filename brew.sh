@@ -42,6 +42,8 @@ brew tap caskroom/versions
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm3
 brew cask install --appdir="~/Applications" imageoptim
+
+# Messaging casks
 brew cask install --appdir="~/Applications" yakyak
 brew cask install --appdir="~/Applications" telegram
 brew cask install --appdir="~/Applications" whatsapp
