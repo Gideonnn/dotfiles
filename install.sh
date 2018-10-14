@@ -9,6 +9,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install all available updates
 sudo softwareupdate -iva
 
+# Create project folders
+mkdir -p ~/git/work
+
 # Install Hombrew and apps
 source ./brew.sh
 
