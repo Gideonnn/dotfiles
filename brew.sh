@@ -40,7 +40,7 @@ brew tap caskroom/versions
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm3
+brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" imageoptim
 
 # Messaging casks
