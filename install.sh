@@ -9,9 +9,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install all available updates
 sudo softwareupdate -iva
 
-# Install Xcode command line tools
-source ./xcode.sh
-
 # Install Hombrew and apps
 source ./brew.sh
 
