@@ -12,6 +12,9 @@ sudo softwareupdate -iva
 # Create project folders
 mkdir -p ~/git/work
 
+# Use symbolic links for dotfiles
+source ./symlinks.sh
+
 # Install Hombrew and apps
 source ./brew.sh
 
