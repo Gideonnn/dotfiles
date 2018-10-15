@@ -50,7 +50,6 @@ brew cask install --appdir="~/Applications" whatsapp
 
 # Development tool casks
 brew cask install --appdir="/Applications" visual-studio-code
-brew cask install --appdir="/Applications" virtualbox
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
