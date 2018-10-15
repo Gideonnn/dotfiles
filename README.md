@@ -24,3 +24,10 @@ git clone git@github.com:Gideonnn/dotfiles.git ~/git/dotfiles
 source install.sh
 ```
 
+### Post install
+
+## Oh-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+

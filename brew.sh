@@ -65,5 +65,8 @@ brew install docker
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
 
+# Install zsh
+brew install zsh
+
 # Remove outdated versions from the cellar.
 brew cleanup
