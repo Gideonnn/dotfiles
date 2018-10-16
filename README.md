@@ -35,3 +35,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 1. Go to Systeemvoorkeuren > Spotlight > Toetsencombinaties and uncheck cmd + space to open Spotlight.
 2. Open Alfred and set 'Alfred Hotkey' to cmd + space.
 3. Set 'Where are you' to Netherlands
+
+## Finder
+Open Voorkeuren > Geavanceerd and underneath 'Zorg dat mappen bovenaan staan:' check 'In vensters bij sorteren op naam'.
