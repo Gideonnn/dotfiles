@@ -35,6 +35,9 @@ brew install openssh
 brew install git
 brew install git-extras
 
+# Install node
+brew install node
+
 # Install Cask
 brew tap caskroom/versions
 
