@@ -31,3 +31,7 @@ source install.sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+## Alfred
+1. Go to Systeemvoorkeuren > Spotlight > Toetsencombinaties and uncheck cmd + space to open Spotlight.
+2. Open Alfred and set 'Alfred Hotkey' to cmd + space.
+3. Set 'Where are you' to Netherlands
