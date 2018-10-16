@@ -38,3 +38,20 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 ## Finder
 Open Voorkeuren > Geavanceerd and underneath 'Zorg dat mappen bovenaan staan:' check 'In vensters bij sorteren op naam'.
+
+## Vivaldi
+1. Open Voorkeuren (cmd + ,)
+2. Opstarten
+ - Set Vivaldi as the default browser
+ - Startpagina: Snelkiezerpagina
+3. Thema's
+ - Thema: Dark
+4. Snelkiezerpagina
+ - Achtergrondkleur: Pro
+5. Navigate to Tabs
+ - Positie nieuwe tab: Achteraan
+ - Positie gedupliceerde tab: Naast originele tab
+6. Adresbalk
+ - Adresbalkopties: (checked) Volledig adres weergeven
+7. Toetsenbord
+ - Ontwikkelaarsgereedschap: alt + option + j
