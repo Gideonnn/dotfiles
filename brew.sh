@@ -62,8 +62,8 @@ brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" spotify
 
-# Install Docker, which requires virtualbox
-brew install docker
+# Install Docker
+brew cask install --appdir="/Applications" docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
