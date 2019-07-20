@@ -19,7 +19,7 @@ brew install coreutils
 brew install findutils
 
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 
 # Install `wget`
 brew install wget
