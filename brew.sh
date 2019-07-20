@@ -51,7 +51,7 @@ brew cask install whatsapp
 
 # Development tool casks
 brew cask install visual-studio-code
-brew cask install postman
+brew cask install insomniaq
 
 # Misc casks
 brew cask install google-chrome
