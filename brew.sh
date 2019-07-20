@@ -25,7 +25,7 @@ brew install gnu-sed
 brew install wget
 
 # Install more recent versions of some OS X tools.
-brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 
