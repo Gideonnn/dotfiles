@@ -40,26 +40,26 @@ brew install nvm && mkdir ~/.nvm
 brew tap caskroom/versions
 
 # Core casks
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" imageoptim
+brew cask install alfred
+brew cask install iterm2
+brew cask install imageoptim
 
 # Messaging casks
-brew cask install --appdir="~/Applications" yakyak
-brew cask install --appdir="~/Applications" telegram
-brew cask install --appdir="~/Applications" whatsapp
+brew cask install yakyak
+brew cask install telegram
+brew cask install whatsapp
 
 # Development tool casks
-brew cask install --appdir="/Applications" visual-studio-code
-brew cask install --appdir="/Applications" postman
+brew cask install visual-studio-code
+brew cask install postman
 
 # Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" vivaldi
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" spotify
+brew cask install google-chrome
+brew cask install firefox
+brew cask install vivaldi
+brew cask install slack
+brew cask install dropbox
+brew cask install spotify
 
 # Install Docker
 brew cask install --appdir="/Applications" docker
