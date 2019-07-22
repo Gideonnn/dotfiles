@@ -24,6 +24,9 @@ brew install gnu-sed
 # Install `wget`
 brew install wget
 
+# Install fzf
+brew install fzf
+
 # Install more recent versions of some OS X tools.
 brew install vim
 brew install grep
