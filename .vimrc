@@ -139,7 +139,7 @@ call plug#begin()
 
 "fzf (https://github.com/junegunn/fzf.vim)
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim
+Plug 'junegunn/fzf.vim'
 
 "editorconfig (https://github.com/editorconfig/editorconfig-vim)
 Plug 'editorconfig/editorconfig-vim'

@@ -7,3 +7,6 @@ ln -s ~/git/dotfiles/.gitignore ~/.gitignore
 # Ssh config
 rm -f ~/.ssh/config
 ln -s ~/git/dotfiles/.ssh-config ~/.ssh/config
+
+# Vim
+ln -s ~/git/dotfiles/.vimrc ~/.vimrc
