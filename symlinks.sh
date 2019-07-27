@@ -10,3 +10,6 @@ ln -s ~/git/dotfiles/.ssh-config ~/.ssh/config
 
 # Vim
 ln -s ~/git/dotfiles/.vimrc ~/.vimrc
+
+# Zsh
+ln -s ~/git/dotfiles/.zshrc ~/.zshrc
