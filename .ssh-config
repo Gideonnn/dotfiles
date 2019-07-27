@@ -1,3 +1,7 @@
+# Add work ssh key here
+Host jmb.gitlab.schubergphilis.com
+ IdentityFile ~/.ssh/SSH_KEY_NAME
+
 Host *
  AddKeysToAgent yes
  IgnoreUnknown UseKeychain
