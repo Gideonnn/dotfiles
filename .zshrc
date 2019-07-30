@@ -1,6 +1,3 @@
-#debug
-zmodload zsh/zprof
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/gideon/.oh-my-zsh"
 
@@ -100,5 +97,3 @@ load_nvm () {
 for cmd in "${NODE_GLOBALS[@]}"; do
   eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
 done
-
-zprof
