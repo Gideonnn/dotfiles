@@ -47,13 +47,34 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 2. Open Alfred and set 'Alfred Hotkey' to cmd + space.
 3. Set 'Where are you' to Netherlands
 
-## Escape key
+## Beveiliging en privacy
 
-Open Systeemvoorkeuren > Toetsenbord > Speciale toetsen and remap Caps-Lock to Escape.
+Open Systeemvoorkeuren > Beveiliging en privacy > Algemeen: Vraag 'meteen' om wachtwoord.
+
+## Control Strip
+
+Open Systeemvoorkeuren > Toetsenbord > Pas Control Strip aan ...: Play/pause, Helderheid, Volume, Niet storen
 
 ## Finder
 
-Open Voorkeuren > Geavanceerd and underneath 'Zorg dat mappen bovenaan staan:' check 'In vensters bij sorteren op naam'.
+Open Systeemvoorkeuren > Geavanceerd en onder 'Zorg dat mappen bovenaan staan:' check 'In vensters bij sorteren op naam'.
+
+## Notificaties
+
+Open Systeemvoorkeuren > Berichtgeving > X: uncheck 'Toon op vergrendeld scherm' en 'Toon voorvertoning'.
+
+  - Berichten
+  - Telegram
+  - Whatsapp
+
+## Toetsenbord
+
+Open Systeemvoorkeuren > Toetsenbord > Tekst: zet 'Corrigeer spelling' en 'Automatische hoofdletters' uit
+Open Systeemvoorkeuren > Toetsenbord > Speciale toetsen and remap Caps-Lock to Escape.
+
+## Taalvoorkeuren
+
+Open Systeemvoorkeuren > Taal en regio > Voorkeurstalen: voeg Dvorak toe.
 
 ## Vivaldi
 
