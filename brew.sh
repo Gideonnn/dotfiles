@@ -39,6 +39,9 @@ brew install git-extras
 # Install nvm
 brew install nvm && mkdir ~/.nvm
 
+# Yarn
+brew install yarn
+
 # Install Cask
 brew tap caskroom/versions
 
@@ -48,13 +51,12 @@ brew cask install iterm2
 brew cask install imageoptim
 
 # Messaging casks
-brew cask install yakyak
 brew cask install telegram
 brew cask install whatsapp
 
 # Development tool casks
 brew cask install visual-studio-code
-brew cask install insomniaq
+brew cask install insomnia
 
 # Misc casks
 brew cask install google-chrome

@@ -38,6 +38,9 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Gnu-sed's bin folder
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
+# Python stuff
+export PATH="/Users/gideon/Library/Python/2.7/bin:$PATH"
+
 # Nvm settings
 export NVM_DIR=~/.nvm
 
@@ -52,9 +55,6 @@ alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias ..5='cd ../../../../..'
 
-# Use ripgrep instead of grep
-alias grep='ripgrep'
-
 # Git commands
 alias gs="git status"
 alias gl="git log"
@@ -66,10 +66,9 @@ alias gal="git add ."
 alias gall="git add ."
 alias gca="git commit -a"
 alias gc="git commit -m"
-alias gcot="git checkout"
-alias gchekout="git checkout"
-alias gchckout="git checkout"
-alias gckout="git checkout"
+alias gcam="git commit --amend --no-edit"
+alias gp="git push"
+alias gplease="git push --force-with-lease"
 alias go="git push -u origin"
 
 # System state
