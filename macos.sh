@@ -124,8 +124,9 @@ sudo defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262
 sudo defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "nl"
