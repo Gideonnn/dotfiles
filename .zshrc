@@ -21,7 +21,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git node npm kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -43,6 +43,10 @@ export PATH="/Users/gideon/Library/Python/2.7/bin:$PATH"
 
 # Nvm settings
 export NVM_DIR=~/.nvm
+
+# iTerm settings
+unsetopt inc_append_history
+unsetopt share_history
 
 #
 # Aliasses
@@ -75,6 +79,12 @@ alias go="git push -u origin"
 alias reboot="sudo /sbin/reboot"
 alias poweroff="sudo /sbin/poweroff"
 alias shutdown="sudo /sbin/shutdown"
+
+# Kubernetes
+alias k='kubectl'
+alias kg='kubectl get'
+alias kgpo='kubectl get pod'
+alias krm='kubectl delete'
 
 #
 # Lazy load nvm
