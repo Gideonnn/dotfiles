@@ -18,9 +18,9 @@ COMPUTERNAME_SIMPLE="Gideons-MacBook-Pro"
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName $COMPUTERNAME
-sudo scutil --set HostName $COMPUTERNAME
-sudo scutil --set LocalHostName $COMPUTERNAME_SIMPLE
+sudo scutil --set ComputerName "$COMPUTERNAME"
+sudo scutil --set HostName "$COMPUTERNAME"
+sudo scutil --set LocalHostName "$COMPUTERNAME_SIMPLE"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTERNAME"
 
 # Set standby delay to 24 hours (default is 1 hour or 3600)
