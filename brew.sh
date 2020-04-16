@@ -69,6 +69,10 @@ brew cask install spotify
 # Install Docker
 brew cask install docker
 
+# Install Kubernetes context switcher
+brew tap blendle/blendle
+brew install kns
+
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
 
