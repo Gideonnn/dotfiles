@@ -48,43 +48,8 @@ export NVM_DIR=~/.nvm
 unsetopt inc_append_history
 unsetopt share_history
 
-#
-# Aliasses
-#
-
-# Navigation aliasses
-alias ..='cd ..'
-alias ..2='cd ../..'
-alias ..3='cd ../../..'
-alias ..4='cd ../../../..'
-alias ..5='cd ../../../../..'
-
-# Git commands
-alias gs="git status"
-alias gl="git log"
-alias ga="git add"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gaa="git add -A"
-alias gal="git add ."
-alias gall="git add ."
-alias gca="git commit -a"
-alias gc="git commit -m"
-alias gcam="git commit --amend --no-edit"
-alias gp="git push"
-alias gplease="git push --force-with-lease"
-alias go="git push -u origin"
-
-# System state
-alias reboot="sudo /sbin/reboot"
-alias poweroff="sudo /sbin/poweroff"
-alias shutdown="sudo /sbin/shutdown"
-
-# Kubernetes
-alias k='kubectl'
-alias kg='kubectl get'
-alias kgpo='kubectl get pod'
-alias krm='kubectl delete'
+# Load aliasses
+source ~/git/dotfiles/alias.sh
 
 #
 # Lazy load nvm
@@ -106,3 +71,10 @@ load_nvm () {
 for cmd in "${NODE_GLOBALS[@]}"; do
   eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
 done
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
