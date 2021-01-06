@@ -49,7 +49,7 @@ unsetopt inc_append_history
 unsetopt share_history
 
 # Load aliasses
-source ~/git/dotfiles/alias.sh
+source ~/git/dotfiles/aliases.sh
 
 #
 # Lazy load nvm
