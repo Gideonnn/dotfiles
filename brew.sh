@@ -12,25 +12,11 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install GNU core utilities (those that come with OS X are outdated).
-brew install coreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
-
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed
-
-# Install `wget`
-brew install wget
-
-# Install fzf
-brew install fzf
-
 # Install more recent versions of some OS X tools.
 brew install vim
 brew install grep
 brew install openssh
+brew install wget
 
 # Install Git
 brew install git
@@ -42,39 +28,38 @@ brew install nvm && mkdir ~/.nvm
 # Yarn
 brew install yarn
 
-# Install Cask
-brew tap caskroom/versions
+# Utils
+brew install --cask alfred
+brew install --cask iterm2
+brew install --cask imageoptim
+brew install --cask disk-inventory-x
 
-# Core casks
-brew cask install alfred
-brew cask install iterm2
-brew cask install imageoptim
+# Messaging
+brew install --cask telegram
+brew install --cask whatsapp
+brew install --cask slack
 
-# Messaging casks
-brew cask install telegram
-brew cask install whatsapp
+# Development
+brew install --cask visual-studio-code
+brew install --cask insomnia-designer
+brew install --cask docker
 
-# Development tool casks
-brew cask install visual-studio-code
-brew cask install insomnia
+# Browsers
+brew install --cask google-chrome
+brew install --cask firefox
 
-# Misc casks
-brew cask install google-chrome
-brew cask install firefox
-brew cask install vivaldi
-brew cask install slack
-brew cask install dropbox
-brew cask install spotify
-
-# Install Docker
-brew cask install docker
+# Misc
+brew install --cask dropbox
+brew install --cask spotify
 
 # Install Kubernetes context switcher
-brew tap blendle/blendle
-brew install kns
+#brew tap blendle/blendle
+#brew install kns
 
-# Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+# Nerd fonts
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+brew untap homebrew/cask-fonts
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -2,3 +2,10 @@
   path = ~/git/dotfiles/.gitconfig-personal
 [includeIf "gitdir:~/git/work/"]
   path = ~/git/dotfiles/.gitconfig-work
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

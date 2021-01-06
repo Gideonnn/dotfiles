@@ -18,10 +18,10 @@ source ./symlinks.sh
 # Install Hombrew and apps
 source ./brew.sh
 
-# Set Vim preferences
-source ./vim.sh
+# Install default yarn packages
+source ./yarn.sh
 
-# Set MacOS preferences
-source ./macos.sh
+# Clone some repos
+source ./repos.sh
 
 echo "Done, enjoy!"
