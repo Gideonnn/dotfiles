@@ -28,12 +28,6 @@ brew install nvm && mkdir ~/.nvm
 # Yarn
 brew install yarn
 
-# Utils
-brew install --cask alfred
-brew install --cask iterm2
-brew install --cask imageoptim
-brew install --cask disk-inventory-x
-
 # Messaging
 brew install --cask telegram
 brew install --cask whatsapp
@@ -43,6 +37,7 @@ brew install --cask slack
 brew install --cask visual-studio-code
 brew install --cask insomnia-designer
 brew install --cask docker
+brew install --cask mongodb-compass
 
 # Browsers
 brew install --cask google-chrome
@@ -51,6 +46,12 @@ brew install --cask firefox
 # Misc
 brew install --cask dropbox
 brew install --cask spotify
+brew install --cask alfred
+brew install --cask iterm2
+brew install --cask imageoptim
+brew install --cask disk-inventory-x
+brew install --cask chrysalis
+brew install --cask hammerspoon
 
 # Install Kubernetes context switcher
 #brew tap blendle/blendle

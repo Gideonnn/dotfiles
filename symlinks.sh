@@ -14,3 +14,7 @@ ln -s ~/git/dotfiles/.vimrc ~/.vimrc
 # Zsh
 rm ~/.zshrc
 ln -s ~/git/dotfiles/.zshrc ~/.zshrc
+
+# Hammerspoon
+rm -rf ~/.hammerspoon
+ln -s ~/git/dotfiles/.hammerspoon ~/.hammerspoon

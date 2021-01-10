@@ -93,6 +93,22 @@ Preferences > Profiles Tab > Window Tab > Blur: Checked, veul
 
 Preferences > General > Closing: uncheck confirm 'Quit iTerm' command
 
+#### Reuse directory when creating new tabs
+
+Preferences > Profiles > Working directory: Reuse previous sessions's directory
+
+#### TouchID for sudo
+
+```
+$ sudo vim /etc/pam.d/sudo
+```
+
+Add `auth       sufficient     pam_tid.so` on top of the list.
+
+Go to iTerm > Preferences > Advanced: Allow sessions to survive logging out and back in: No
+
+Note: Recent MacOS updates may remove the entry. If TouchID stops working for sudo then check if the entry was removed and add it back in, following these instructions again.
+
 ### Visual Studio Code
 
 #### Plugins
@@ -236,7 +252,10 @@ Open Systeemvoorkeuren > Toetsenbord > Pas Control Strip aan ...: Play/pause, He
 
 ### Finder
 
-Open Systeemvoorkeuren > Geavanceerd en onder 'Zorg dat mappen bovenaan staan:' check 'In vensters bij sorteren op naam'.
+Finder > Voorkeuren > Algemeen > Toon in nieuwe finder-vensters: 'gideon'.
+Finder > Voorkeuren > Tags: Uncheck all.
+Finder > Voorkeuren > Geavanceerd > Zorg dat mappen bovenaan staan: 'In vensters bij sorteren op naam'.
+Finder > Voorkeuren > Geavanceerd > Bij het uitvoeren van een zoekopdracht: 'Zoek in huidige map'.
 
 ### Notificaties
 
@@ -256,3 +275,7 @@ Open Systeemvoorkeuren > Toetsenbord > Toetscombinaties > Toegankelijkheid: bind
 ### Taalvoorkeuren
 
 Open Systeemvoorkeuren > Taal en regio > Voorkeurstalen: voeg Dvorak toe.
+
+### Spaces
+
+Open Systeemvoorkeuren > Mission Control: uncheck 'Orden spaces automatisch'

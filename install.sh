@@ -12,6 +12,11 @@ sudo softwareupdate -i --verbose
 # Create project folders
 mkdir -p ~/git/work
 
+# Create vim swap file directories
+mkdir ~/.vim
+touch ~/.vim/backup
+touch ~/.vim/swap
+
 # Use symbolic links for dotfiles
 source ./symlinks.sh
 
