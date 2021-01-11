@@ -38,6 +38,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# Fix slow pasting. (source: https://stackoverflow.com/questions/25614613)
+DISABLE_MAGIC_FUNCTIONS=true
+
 source $ZSH/oh-my-zsh.sh
 
 # Load Pure prompt
