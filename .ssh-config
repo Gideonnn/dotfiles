@@ -1,6 +1,6 @@
 # Add work ssh key here
-Host jmb.gitlab.schubergphilis.com
- IdentityFile ~/.ssh/id_rsa_jumbo
+Host *
+ IdentityFile ~/.ssh/id_rsa_COMPANYNAME
 
 Host *
  AddKeysToAgent yes
