@@ -3,6 +3,21 @@ local GUTTER = 20
 
 function rectFactory(gutter, osTopBarHeight)
   return function(x, y, w, h)
+    if x == 0 then
+      x = x + gutter
+      w = w - gutter
+    end
+    
+    if y == 0 then
+      y = y + osTopBarHeight
+      h = h - osTopBarHeight
+      y = y + gutter
+      h = h - gutter
+    end
+
+    h = h - gutter
+    w = w - gutter
+
     return hs.geometry(x, y, w, h)
   end
 end
