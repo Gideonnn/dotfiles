@@ -279,3 +279,30 @@ Open Systeemvoorkeuren > Taal en regio > Voorkeurstalen: voeg Dvorak toe.
 ### Spaces
 
 Open Systeemvoorkeuren > Mission Control: uncheck 'Orden spaces automatisch'
+
+### Emacs
+
+Install Emacs dependencies. Most are probably already installed.
+```
+# Required dependencies
+brew install git ripgrep
+
+# Optional dependencies
+brew install coreutils fd
+
+# Installs clang
+xcode-select --install
+```
+
+Install Emacs
+```
+brew tap railwaycat/emacsmacport
+brew install emacs-mac --with-modules
+ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
+```
+
+Install Doom Emacs
+```
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+```
