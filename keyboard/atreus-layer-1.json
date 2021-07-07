@@ -1,0 +1,237 @@
+{
+    "keymap": [
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 224,
+        "label": "LCtrl",
+        "verbose": "Left Control"
+      },
+      {
+        "keyCode": 225,
+        "label": "LShift",
+        "verbose": "Left Shift"
+      },
+      {
+        "keyCode": 226,
+        "label": "LAlt",
+        "verbose": "Left Alt"
+      },
+      {
+        "keyCode": 227,
+        "label": "LCmd",
+        "verbose": "Left Cmd"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 231,
+        "label": "RCmd",
+        "verbose": "Right Cmd"
+      },
+      {
+        "keyCode": 230,
+        "label": "RAlt",
+        "verbose": "AltGr (Right Alt)"
+      },
+      {
+        "keyCode": 229,
+        "label": "RShift",
+        "verbose": "Right Shift"
+      },
+      {
+        "keyCode": 228,
+        "label": "RCtrl",
+        "verbose": "Right Control"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 80,
+        "label": "←"
+      },
+      {
+        "keyCode": 82,
+        "label": "↑"
+      },
+      {
+        "keyCode": 79,
+        "label": "→"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 80,
+        "label": "←"
+      },
+      {
+        "keyCode": 81,
+        "label": "↓"
+      },
+      {
+        "keyCode": 82,
+        "label": "↑"
+      },
+      {
+        "keyCode": 79,
+        "label": "→"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 81,
+        "label": "↓"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      }
+    ],
+    "palette": []
+  }

@@ -1,0 +1,212 @@
+{
+    "keymap": [
+      {
+        "keyCode": 41,
+        "label": "Esc"
+      },
+      {
+        "keyCode": 51,
+        "label": ";"
+      },
+      {
+        "keyCode": 2099,
+        "label": ":"
+      },
+      {
+        "keyCode": 45,
+        "label": "-"
+      },
+      {
+        "keyCode": 2078,
+        "label": "!"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 2104,
+        "label": "?"
+      },
+      {
+        "keyCode": 46,
+        "label": "="
+      },
+      {
+        "keyCode": 56,
+        "label": "/"
+      },
+      {
+        "keyCode": 2097,
+        "label": "|"
+      },
+      {
+        "keyCode": 2094,
+        "label": "+"
+      },
+      {
+        "keyCode": 2102,
+        "label": "<"
+      },
+      {
+        "keyCode": 2086,
+        "label": "("
+      },
+      {
+        "keyCode": 2095,
+        "label": "{"
+      },
+      {
+        "keyCode": 47,
+        "label": "["
+      },
+      {
+        "keyCode": 52,
+        "label": "'"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 2100,
+        "label": "\""
+      },
+      {
+        "keyCode": 48,
+        "label": "]"
+      },
+      {
+        "keyCode": 2096,
+        "label": "}"
+      },
+      {
+        "keyCode": 2087,
+        "label": ")"
+      },
+      {
+        "keyCode": 2103,
+        "label": ">"
+      },
+      {
+        "keyCode": 2084,
+        "label": "&"
+      },
+      {
+        "keyCode": 2079,
+        "label": "@"
+      },
+      {
+        "keyCode": 2080,
+        "label": "#"
+      },
+      {
+        "keyCode": 2093,
+        "label": "_"
+      },
+      {
+        "keyCode": 53,
+        "label": "`"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 2101,
+        "label": "~"
+      },
+      {
+        "keyCode": 2083,
+        "label": "^"
+      },
+      {
+        "keyCode": 2082,
+        "label": "%"
+      },
+      {
+        "keyCode": 2085,
+        "label": "*"
+      },
+      {
+        "keyCode": 2081,
+        "label": "$"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 76,
+        "label": "Del"
+      },
+      {
+        "keyCode": 43,
+        "label": "Tab"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 49,
+        "label": "\\"
+      },
+      {
+        "keyCode": 543,
+        "label": "2",
+        "extraLabel": "A+"
+      },
+      {
+        "keyCode": 65535,
+        "label": "",
+        "verbose": "Transparent"
+      }
+    ],
+    "palette": []
+  }

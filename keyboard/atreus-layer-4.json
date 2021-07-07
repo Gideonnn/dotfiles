@@ -1,0 +1,222 @@
+{
+    "keymap": [
+      {
+        "keyCode": 41,
+        "label": "Esc"
+      },
+      {
+        "keyCode": 30,
+        "label": "1",
+        "extraLabel": "!"
+      },
+      {
+        "keyCode": 31,
+        "label": "2",
+        "extraLabel": "@"
+      },
+      {
+        "keyCode": 32,
+        "label": "3",
+        "extraLabel": "#"
+      },
+      {
+        "keyCode": 33,
+        "label": "4",
+        "extraLabel": "$"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 9,
+        "label": "F"
+      },
+      {
+        "keyCode": 10,
+        "label": "G"
+      },
+      {
+        "keyCode": 6,
+        "label": "C"
+      },
+      {
+        "keyCode": 21,
+        "label": "R"
+      },
+      {
+        "keyCode": 15,
+        "label": "L"
+      },
+      {
+        "keyCode": 225,
+        "label": "LShift",
+        "verbose": "Left Shift"
+      },
+      {
+        "keyCode": 80,
+        "label": "←"
+      },
+      {
+        "keyCode": 82,
+        "label": "↑"
+      },
+      {
+        "keyCode": 79,
+        "label": "→"
+      },
+      {
+        "keyCode": 34,
+        "label": "5",
+        "extraLabel": "%"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 7,
+        "label": "D"
+      },
+      {
+        "keyCode": 11,
+        "label": "H"
+      },
+      {
+        "keyCode": 23,
+        "label": "T"
+      },
+      {
+        "keyCode": 17,
+        "label": "N"
+      },
+      {
+        "keyCode": 22,
+        "label": "S"
+      },
+      {
+        "keyCode": 43,
+        "label": "Tab"
+      },
+      {
+        "keyCode": 35,
+        "label": "6",
+        "extraLabel": "^"
+      },
+      {
+        "keyCode": 81,
+        "label": "↓"
+      },
+      {
+        "keyCode": 36,
+        "label": "7",
+        "extraLabel": "&"
+      },
+      {
+        "keyCode": 37,
+        "label": "8",
+        "extraLabel": "*"
+      },
+      {
+        "keyCode": 17496,
+        "label": "4",
+        "extraLabel": "MoveTo"
+      },
+      {
+        "keyCode": 17492,
+        "label": "0",
+        "extraLabel": "MoveTo"
+      },
+      {
+        "keyCode": 5,
+        "label": "B"
+      },
+      {
+        "keyCode": 16,
+        "label": "M"
+      },
+      {
+        "keyCode": 26,
+        "label": "W"
+      },
+      {
+        "keyCode": 25,
+        "label": "V"
+      },
+      {
+        "keyCode": 29,
+        "label": "Z"
+      },
+      {
+        "keyCode": 224,
+        "label": "LCtrl",
+        "verbose": "Left Control"
+      },
+      {
+        "keyCode": 38,
+        "label": "9",
+        "extraLabel": "("
+      },
+      {
+        "keyCode": 39,
+        "label": "0",
+        "extraLabel": ")"
+      },
+      {
+        "keyCode": 226,
+        "label": "LAlt",
+        "verbose": "Left Alt"
+      },
+      {
+        "keyCode": 44,
+        "label": "Space"
+      },
+      {
+        "keyCode": 17453,
+        "label": "3",
+        "extraLabel": "ShiftTo"
+      },
+      {
+        "keyCode": 17453,
+        "label": "3",
+        "extraLabel": "ShiftTo"
+      },
+      {
+        "keyCode": 17452,
+        "label": "2",
+        "extraLabel": "ShiftTo"
+      },
+      {
+        "keyCode": 17451,
+        "label": "1",
+        "extraLabel": "ShiftTo"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 0,
+        "label": "Blocked",
+        "verbose": "Disabled"
+      },
+      {
+        "keyCode": 40,
+        "label": "Enter"
+      }
+    ],
+    "palette": []
+  }
