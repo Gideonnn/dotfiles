@@ -67,8 +67,8 @@ export PATH="/Users/gideon/Library/Python/2.7/bin:$PATH"
 export NVM_DIR=~/.nvm
 
 # iTerm settings
-unsetopt inc_append_history
-unsetopt share_history
+#unsetopt inc_append_history
+#unsetopt share_history
 
 # Load aliasses
 source ~/git/dotfiles/aliases.sh
