@@ -9,6 +9,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install all available updates
 sudo softwareupdate -i --verbose
 
+# Install and enable Command Line Tools
+xcode-select --install
+sudo xcode-select --switch /Library/Developer/CommandLineTools
+
 # Create project folders
 mkdir -p ~/git/work
 
