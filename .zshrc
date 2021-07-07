@@ -93,3 +93,6 @@ load_nvm () {
 for cmd in "${NODE_GLOBALS[@]}"; do
   eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
 done
+
+# AWS SAM settings
+SAM_CLI_TELEMETRY=0
