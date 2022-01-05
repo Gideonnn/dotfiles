@@ -63,6 +63,9 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # Python stuff
 export PATH="/Users/gideon/Library/Python/2.7/bin:$PATH"
 
+# Custom bin files
+export PATH="/Users/gideon/git/dotfiles/bin:$PATH"
+
 # Nvm settings
 export NVM_DIR=~/.nvm
 

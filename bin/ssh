@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Remove old symlink
+rm -f ~/.ssh/config
+
+# Add new one based on current folder
+if [[ "${pwd}" ~= */git/work ]]; then
+  echo "Switching to ssh work config"
+  ln -s ~/git/dotfiles/.ssh-config-work ~/.ssh/config
+else
+  echo "Switching to ssh personal config"
+  ln -s ~/git/dotfiles/.ssh-config-personal ~/.ssh/config
+fi
+
+# Forward to ssh binary
+/usr/bin/ssh $@
