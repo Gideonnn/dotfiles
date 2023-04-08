@@ -20,14 +20,17 @@ sudo pmset -a displaysleep 0
 sudo pmset -a disksleep 0
 sudo pmset -a sleep 0
 
+# Remove default public folder
+sudo rm -rf ~/Public
+
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=%80
 
 # Disable the power chime (charger plug in sound)
 defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
 
-# Disable Resume system-wide
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+# Increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false

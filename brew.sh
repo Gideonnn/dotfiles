@@ -25,9 +25,6 @@ brew install git-extras
 # Install nvm
 brew install nvm && mkdir ~/.nvm
 
-# Yarn
-brew install yarn
-
 # Messaging
 brew install --cask telegram
 brew install --cask whatsapp
@@ -44,18 +41,12 @@ brew install --cask google-chrome
 brew install --cask firefox
 
 # Misc
-brew install --cask dropbox
 brew install --cask spotify
-brew install --cask alfred
 brew install --cask iterm2
 brew install --cask imageoptim
 brew install --cask disk-inventory-x
 brew install --cask chrysalis
 brew install --cask hammerspoon
-
-# Install Kubernetes context switcher
-#brew tap blendle/blendle
-#brew install kns
 
 # Nerd fonts
 brew tap homebrew/cask-fonts

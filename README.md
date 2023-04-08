@@ -1,31 +1,22 @@
-## Pre install
+# Installing macOS for development
 
-### SSH keys
+## XCode Command Line Tools
 
-```
-# Generate two ssh keys, one for personal and one for work
-# Use /Users/gideon/.ssh/id_rsa for personal
-# Use /Users/gideon/.ssh/id_rsa_SOMETHING for work
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+Open a terminal and run the following command:
 
-# Start the ssh-agent in the background
-eval "$(ssh-agent -s)"
-
-# Add private key to ssh-agent
-ssh-add ~/.ssh/id_rsa
-ssh-add ~/.ssh/id_rsa_SOMETHING
+```bash
+xcode-select --install
 ```
 
-### Github
+## Clone this repo
 
+```bash
+git clone git@github.com:Gideonnn/dotfiles.git ~/git/dotfiles
 ```
-# Copy the personal key to clipboard
-pbcopy < ~/.ssh/id_rsa.pub
-```
 
-Go to [GitHub](https://github.com/settings/keys) and add the key to SSH keys
+## Homebrew
 
-### Homebrew
+Install Homebrew by running this command:
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -33,26 +24,64 @@ Go to [GitHub](https://github.com/settings/keys) and add the key to SSH keys
 
 ## Oh-my-zsh
 
-Install Oh-My-Zsh by running this command:
+Install Oh-My-Zsh:
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-brew install zsh-syntax-highlighting
-brew install zsh-autosuggestions
 ```
 
-### Dotfiles
+## SSH keys
 
 ```
-# Clone this repo
-git clone git@github.com:Gideonnn/dotfiles.git ~/git/dotfiles
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
-# Run install.sh in root dir
+Start the ssh-agent in the background
+
+```
+eval "$(ssh-agent -s)"
+```
+
+Add private key to ssh-agent
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+
+Copy the personal key to clipboard:
+
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+Go to [GitHub](https://github.com/settings/keys) and add the key to SSH keys
+
+## Configure
+
+Run the following command to install all the things:
+
+```
 source install.sh
 ```
 
-## Post install
+## Post `install.sh`
+
+### Finder settings
+
+Open finder settings and change the following:
+Algemeen:
+
+- Toon in nieuwe Finder-vensters: gideon (home folder)
+
+Navigatiekolom order:
+
+- AirDrop
+- Apps
+- Documenten
+- Downloads
+- Bureablad
+- gideon
+- git
 
 ### Git config
 
@@ -121,15 +150,39 @@ settings.json
 
 ```
 {
-    "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
-    "editor.formatOnSave": true,
-    "editor.minimap.enabled": false,
-    "explorer.confirmDelete": false,
-    "editor.renderWhitespace": "boundary",
-    "explorer.openEditors.visible": 0,
-    "editor.codeLens": false,
-    "workbench.editor.highlightModifiedTabs": true
+  "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  // "prettier.configPath": "~/git/dotfiles/templates/.prettierrc",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.currentLine.enabled": false,
+  "debug.javascript.codelens.npmScripts": "never",
+  "workbench.editor.highlightModifiedTabs": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true,
+    "typescript": true,
+    "typescriptreact": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "security.workspace.trust.untrustedFiles": "open",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 1
 }
+
 ```
 
 keybindings.json
@@ -279,30 +332,3 @@ Open Systeemvoorkeuren > Taal en regio > Voorkeurstalen: voeg Dvorak toe.
 ### Spaces
 
 Open Systeemvoorkeuren > Mission Control: uncheck 'Orden spaces automatisch'
-
-### Emacs
-
-Install Emacs dependencies. Most are probably already installed.
-```
-# Required dependencies
-brew install git ripgrep
-
-# Optional dependencies
-brew install coreutils fd
-
-# Installs clang
-xcode-select --install
-```
-
-Install Emacs
-```
-brew tap railwaycat/emacsmacport
-brew install emacs-mac --with-modules
-ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
-```
-
-Install Doom Emacs
-```
-git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
-```

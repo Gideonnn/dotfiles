@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Install pure (https://github.com/sindresorhus/pure)
-yarn global add pure-prompt
+npm i -g pure-prompt
 
 # Development
-yarn global add prettier
+npm i -g prettier
+npm i -g yarn
 
 # Utils
-yarn global add trash-cli
+npm i -g trash-cli

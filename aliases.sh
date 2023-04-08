@@ -1,6 +1,6 @@
 # Misc
 ls='ls --color=tty'
-grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
+grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 
 # Navigation aliasses
 alias ..='cd ..'
@@ -45,19 +45,3 @@ alias gcam="git commit --amend --no-edit"
 alias gp="git push"
 alias gplease="git push --force-with-lease"
 alias go="git push -u origin"
-
-# Kubernetes
-alias k='kubectl'
-alias kg='kubectl get'
-alias kgpo='kubectl get pod'
-alias krm='kubectl delete'
-
-# Google Cloud
-alias g="gcloud"
-alias gg="gsutil"
-
-# Terraform
-alias t="terraform"
-alias ti="terraform init"
-alias tp="terraform plan"
-alias ta="terraform apply"

@@ -24,13 +24,16 @@ touch ~/.vim/swap
 # Use symbolic links for dotfiles
 source ./symlinks.sh
 
+# Apply system preferences
+source ./macos.sh
+
 # Install Hombrew and apps
 source ./brew.sh
 
-# Install default yarn packages
-source ./yarn.sh
+# Install default npm packages
+source ./npm.sh
 
-# Clone some repos
-source ./repos.sh
+# Do other stuff
+source ./misc.sh
 
 echo "Done, enjoy!"

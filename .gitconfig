@@ -1,15 +1,31 @@
 [includeIf "gitdir:~/git/"]
   path = ~/git/dotfiles/.gitconfig-personal
+
+[includeIf "gitdir:~/git/spierings_io/"]
+  path = ~/git/dotfiles/.gitconfig-spierings_io
+
 [includeIf "gitdir:~/git/work/"]
   path = ~/git/dotfiles/.gitconfig-work
+
 [pull]
   rebase = true
+
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+
 [alias]
-  ignore = update-index --assume-unchanged
-  unignore = update-index --no-assume-unchanged
-  ignored = !git ls-files -v | grep "^[[:lower:]]"
+  au = update-index --assume-unchanged
+  uau = update-index --no-assume-unchanged
+  aud = !git ls-files -v | grep "^[[:lower:]]"
+
+[init]
+  defaultBranch = main
+
+[merge]
+  tool = code
+
+[mergetool "code"]
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
