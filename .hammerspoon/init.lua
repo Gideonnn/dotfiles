@@ -1,1 +1,2 @@
-require('window-manager')
+-- require('window-manager')
+require('better-window-manager')
