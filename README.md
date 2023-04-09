@@ -66,23 +66,6 @@ source install.sh
 
 ## Post `install.sh`
 
-### Finder settings
-
-Open finder settings and change the following:
-Algemeen:
-
-- Toon in nieuwe Finder-vensters: gideon (home folder)
-
-Navigatiekolom order:
-
-- AirDrop
-- Apps
-- Documenten
-- Downloads
-- Bureablad
-- gideon
-- git
-
 ### Git config
 
 Check out these files and edit them accordingly:
@@ -93,6 +76,10 @@ Check out these files and edit them accordingly:
 ```
 
 ### iTerm
+
+#### Text size
+
+Settings -> Profile -> Text -> Font -> Size: 16
 
 #### Text navigation hotkeys
 
@@ -113,6 +100,8 @@ Preferences > Appearance > Theme: Minimal
 
 Install [this](https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/master/Snazzy.itermcolors) color theme.
 
+Note: don't forget to select the theme after installing it.
+
 #### Transparancy
 
 Preferences > Profiles Tab > Window Tab > Transparency: 15%ish
@@ -125,6 +114,10 @@ Preferences > General > Closing: uncheck confirm 'Quit iTerm' command
 #### Reuse directory when creating new tabs
 
 Preferences > Profiles > Working directory: Reuse previous sessions's directory
+
+#### Remove weird triangle
+
+Profiles > Terminal > Show mark indicators: uncheck
 
 #### TouchID for sudo
 
@@ -140,150 +133,7 @@ Note: Recent MacOS updates may remove the entry. If TouchID stops working for su
 
 ### Visual Studio Code
 
-#### Plugins
-
-- Prettier
-
-#### Settings
-
-settings.json
-
-```
-{
-  "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
-  "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "boundary",
-  "editor.tabSize": 2,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  // "prettier.configPath": "~/git/dotfiles/templates/.prettierrc",
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.openEditors.visible": 0,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.hovers.currentLine.enabled": false,
-  "debug.javascript.codelens.npmScripts": "never",
-  "workbench.editor.highlightModifiedTabs": true,
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
-    "plaintext": false,
-    "markdown": true,
-    "typescript": true,
-    "typescriptreact": true
-  },
-  "editor.inlineSuggest.enabled": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "security.workspace.trust.untrustedFiles": "open",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "none",
-  "window.zoomLevel": 1
-}
-
-```
-
-keybindings.json
-
-```
-// Place your key bindings in this file to override the defaultsauto[]
-[
-    {
-        "key": "cmd+1",
-        "command": "workbench.action.openEditorAtIndex1"
-    },
-    {
-        "key": "ctrl+1",
-        "command": "-workbench.action.openEditorAtIndex1"
-    },
-    {
-        "key": "cmd+2",
-        "command": "workbench.action.openEditorAtIndex2"
-    },
-    {
-        "key": "ctrl+2",
-        "command": "-workbench.action.openEditorAtIndex2"
-    },
-    {
-        "key": "cmd+3",
-        "command": "workbench.action.openEditorAtIndex3"
-    },
-    {
-        "key": "ctrl+3",
-        "command": "-workbench.action.openEditorAtIndex3"
-    },
-    {
-        "key": "cmd+4",
-        "command": "workbench.action.openEditorAtIndex4"
-    },
-    {
-        "key": "ctrl+4",
-        "command": "-workbench.action.openEditorAtIndex4"
-    },
-    {
-        "key": "cmd+5",
-        "command": "workbench.action.openEditorAtIndex5"
-    },
-    {
-        "key": "ctrl+5",
-        "command": "-workbench.action.openEditorAtIndex5"
-    },
-    {
-        "key": "cmd+6",
-        "command": "workbench.action.openEditorAtIndex6"
-    },
-    {
-        "key": "ctrl+6",
-        "command": "-workbench.action.openEditorAtIndex6"
-    },
-    {
-        "key": "cmd+7",
-        "command": "workbench.action.openEditorAtIndex7"
-    },
-    {
-        "key": "ctrl+7",
-        "command": "-workbench.action.openEditorAtIndex7"
-    },
-    {
-        "key": "cmd+8",
-        "command": "workbench.action.openEditorAtIndex8"
-    },
-    {
-        "key": "ctrl+8",
-        "command": "-workbench.action.openEditorAtIndex8"
-    },
-    {
-        "key": "cmd+9",
-        "command": "workbench.action.openEditorAtIndex9"
-    },
-    {
-        "key": "ctrl+9",
-        "command": "-workbench.action.openEditorAtIndex9"
-    },
-    {
-        "key": "cmd+r",
-        "command": "editor.action.rename",
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "f2",
-        "command": "-editor.action.rename",
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+r",
-        "command": "renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "enter",
-        "command": "-renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    }
-]
-```
+Login VSCode om settings te synchroniseren.
 
 ### Alfred
 
@@ -297,7 +147,8 @@ $ sudo mdutil -a -i on
 
 ### Beveiliging en privacy
 
-Open Systeemvoorkeuren > Beveiliging en privacy > Algemeen: Vraag 'meteen' om wachtwoord.
+Open Systeemvoorkeuren > Toegangsscherm > Schakel schermbeveiliging in: Nooit
+Open Systeemvoorkeuren > Toegangsscherm > Vraag om wachtwoord na: Meteen
 
 ### Control Strip
 
@@ -310,9 +161,19 @@ Finder > Voorkeuren > Tags: Uncheck all.
 Finder > Voorkeuren > Geavanceerd > Zorg dat mappen bovenaan staan: 'In vensters bij sorteren op naam'.
 Finder > Voorkeuren > Geavanceerd > Bij het uitvoeren van een zoekopdracht: 'Zoek in huidige map'.
 
+Navigatiekolom finder venster:
+
+- AirDrop
+- Apps
+- Documenten
+- Downloads
+- Bureablad
+- gideon
+- git
+
 ### Notificaties
 
-Open Systeemvoorkeuren > Berichtgeving > Berichten/Telegram/Whatsapp: selecteer bij 'Toon voorvertoning' de optie 'nooit'.
+Open Systeemvoorkeuren > Meldingen > Berichten/Telegram/Whatsapp: selecteer bij 'Toon voorvertoning' de optie 'nooit'.
 
 - Berichten
 - Telegram
@@ -320,10 +181,17 @@ Open Systeemvoorkeuren > Berichtgeving > Berichten/Telegram/Whatsapp: selecteer 
 
 ### Toetsenbord
 
-Open Systeemvoorkeuren > Toetsenbord > Tekst: zet 'Corrigeer spelling' en 'Automatische hoofdletters' uit
-Open Systeemvoorkeuren > Toetsenbord > Tekst: zet 'Gebruik slimme aanhaalingsteken en streepjes'
-Open Systeemvoorkeuren > Toetsenbord > Speciale toetsen and remap Caps-Lock to Escape.
-Open Systeemvoorkeuren > Toetsenbord > Toetscombinaties > Toegankelijkheid: bind 'Keer kleuren om' to cmd + q
+Open Systeemvoorkeuren > Toetsenbord > Invoerbronnen: Wijzig...
+
+- Toon invoermenu in menubalk: Uit
+- Corrigeer spelling automatisch: Uit
+- Voorzie woorden automatisch van hoofdletters: Uit
+- Voeg punt toe via dubbele spatie: Uit
+- Spelling: Automatisch op taal
+- Gebruik slimme aanhaalingsteken en streepjes: Uit
+
+Open Systeemvoorkeuren > Toetsenbord > Toetscombinaties > Speciale toetsen: remap Caps-Lock naar Escape.
+Open Systeemvoorkeuren > Toetsenbord > Toetscombinaties > Toegankelijkheid: bind 'Keer kleuren om' op cmd + q
 
 ### Taalvoorkeuren
 
@@ -331,4 +199,4 @@ Open Systeemvoorkeuren > Taal en regio > Voorkeurstalen: voeg Dvorak toe.
 
 ### Spaces
 
-Open Systeemvoorkeuren > Mission Control: uncheck 'Orden spaces automatisch'
+Open Systeemvoorkeuren > Bureaublad en Dock > 'Orden spaces automatisch'
