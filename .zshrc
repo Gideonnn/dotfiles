@@ -44,6 +44,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 source $ZSH/oh-my-zsh.sh
 
 # Load Pure prompt
+fpath+=/opt/homebrew/share/zsh/site-functions # M2 fix
 autoload -U promptinit; promptinit
 prompt pure
 
