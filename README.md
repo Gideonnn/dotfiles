@@ -33,7 +33,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## SSH keys
 
 ```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 Start the ssh-agent in the background
@@ -45,7 +45,7 @@ eval "$(ssh-agent -s)"
 Add private key to ssh-agent
 
 ```
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_ed25519
 ```
 
 Copy the personal key to clipboard:
@@ -75,84 +75,82 @@ Check out these files and edit them accordingly:
 .gitconfig-work
 ```
 
-### iTerm
+## Systeminstellingen
 
-#### Text size
+### Meldingen
 
-Settings -> Profile -> Text -> Font -> Size: 16
+Messages > Toon voorvertoning: Nooit
+Telegram > Toon voorvertoning: Nooit
+Whatsapp > Sta meldingen toe: Uit
 
-#### Text navigation hotkeys
+### Geluid
 
-Settings -> Profile -> Keys
+Speel geluid af bij opstarten: uit
 
-" ⌘ + ← " - Jump to beginning of line - Send hex code: 0x01
-" ⌘ + → " - Jump to end of line - Send hex code: 0x05
-" ⌥ + ← " - Travel back a word - Send text with Vim characters: \033b
-" ⌥ + → " - Travel forward a word - Send text with Vim characters: \033f
-" ⌥ + del " - Delete a word - Send hex code: 0x1B 0x08 (of 0x17)
-" ⌘ + del " - Delete line - Send hex code: 0x15
+### Bedieningspaneel
 
-#### Enable minimal appearance
+Spotlight > Toon niet in menubalk
 
-Preferences > Appearance > Theme: Minimal
+### Privacy en Beveiliging
 
-#### Color theme
+Open Systeeminstellingen > Toegangsscherm > Schakel schermbeveiliging in: Nooit
+Open Systeeminstellingen > Toegangsscherm > Vraag om wachtwoord na: Meteen
 
-Install [this](https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/master/Snazzy.itermcolors) color theme.
+### Bureaublad en Dock
 
-Note: don't forget to select the theme after installing it.
+Bureaublad en Stage manager > 'Klik op achtergrond on bureaublad te tonen': 'Alleen in Stage Manager'
+Mission Control > Zet 'Orden spaces automatisch op basis van meest recent gebruik' uit
 
-#### Transparancy
+### Achtergrond
 
-Preferences > Profiles Tab > Window Tab > Transparency: 15%ish
-Preferences > Profiles Tab > Window Tab > Blur: Checked, veul
+Gebruikt Moneterey wallpaper met dark mode
 
-#### Annoying quit message
+### Wachtwoorden
 
-Preferences > General > Closing: uncheck confirm 'Quit iTerm' command
+Wachtwoordopties > Vul wachtwoorden en passkeys automatisch in: uit
 
-#### Reuse directory when creating new tabs
+### Internetaccounts
 
-Preferences > Profiles > Working directory: Reuse previous sessions's directory
+Toevoegen van fastmail account:
+- Log in via Fastmail web > Settings > Password & Security > App Passwords > Add new app password
+- Email, Contacten & Agenda's > Wachtwoord genereren
+- Click 'Open dit configuratiebestand' en open het
+- Ga naar Systeeminstellingen > Privacy en Beveiliging > Profielen > Installeer Fastmail profiel
+- Ga naar Internetaccounts en voeg correcte beschrijvingen toe
 
-#### Remove weird triangle
+### Toetsenbord
 
-Profiles > Terminal > Show mark indicators: uncheck
+Invoerbronnen: Wijzig...
+- Toon invoermenu in menubalk: Uit
+- Corrigeer spelling automatisch: Uit
+- Voorzie woorden automatisch van hoofdletters: Uit
+- Voeg punt toe via dubbele spatie: Uit
+- Spelling: Automatisch op taal
+- Gebruik slimme aanhaalingsteken en streepjes: Uit
 
-#### TouchID for sudo
+Toetscombinaties > Speciale toetsen: remap Caps-Lock naar Escape.
+Toetscombinaties > Toegankelijkheid: bind 'Keer kleuren om' op cmd + q
+Toetscombinaties > Zet zo veel mogelijk shortcuts uit
 
-```
-$ sudo vim /etc/pam.d/sudo
-```
+## App Settings
 
-Add `auth       sufficient     pam_tid.so` on top of the list.
+### Arc
 
-Go to iTerm > Preferences > Advanced: Allow sessions to survive logging out and back in: No
+Voeg Bitwarden extensie toe
 
-Note: Recent MacOS updates may remove the entry. If TouchID stops working for sudo then check if the entry was removed and add it back in, following these instructions again.
+Profiles > Search engine: DuckDuckGo
+Profiles > Archive tabs after: 30 days
+Advanced > More settings > Automatisch invullen en wachtwoorden > Wachtwoordmanager:
+- Aanbieden om wachtwoorden op te slaan: uit
+- Automatisch inloggen: uit
 
-### Visual Studio Code
+### Bitwarden
 
-Login VSCode om settings te synchroniseren.
+Open and log into Bitwarden
 
-### Alfred
+### Docker
 
-1. Go to Systeemvoorkeuren > Spotlight > Toetsencombinaties and uncheck cmd + space to open Spotlight.
-2. Open Alfred and set 'Alfred Hotkey' to cmd + space.
-3. Set 'Where are you' to Netherlands
-
-If apps can not be found, run these commands and then rebuild index metadata (alfred advanced preferences):
-$ sudo mdutil -a -i off
-$ sudo mdutil -a -i on
-
-### Beveiliging en privacy
-
-Open Systeemvoorkeuren > Toegangsscherm > Schakel schermbeveiliging in: Nooit
-Open Systeemvoorkeuren > Toegangsscherm > Vraag om wachtwoord na: Meteen
-
-### Control Strip
-
-Open Systeemvoorkeuren > Toetsenbord > Pas Control Strip aan ...: Play/pause, Helderheid, Volume, Niet storen
+Open Docker en log in met personal email
 
 ### Finder
 
@@ -171,32 +169,33 @@ Navigatiekolom finder venster:
 - gideon
 - git
 
-### Notificaties
+### Firefox
 
-Open Systeemvoorkeuren > Meldingen > Berichten/Telegram/Whatsapp: selecteer bij 'Toon voorvertoning' de optie 'nooit'.
+Open and log into Firefox to enable sync.
 
-- Berichten
-- Telegram
-- Whatsapp
+### Hyperkey
 
-### Toetsenbord
+Remap physical key to hyper key: right command.
+Launch on login: on
+Check for updates automatically: on
+Hide menu bar icon: on
 
-Open Systeemvoorkeuren > Toetsenbord > Invoerbronnen: Wijzig...
+### Raycast
 
-- Toon invoermenu in menubalk: Uit
-- Corrigeer spelling automatisch: Uit
-- Voorzie woorden automatisch van hoofdletters: Uit
-- Voeg punt toe via dubbele spatie: Uit
-- Spelling: Automatisch op taal
-- Gebruik slimme aanhaalingsteken en streepjes: Uit
+Open Raycast and follow setup import settings after.
 
-Open Systeemvoorkeuren > Toetsenbord > Toetscombinaties > Speciale toetsen: remap Caps-Lock naar Escape.
-Open Systeemvoorkeuren > Toetsenbord > Toetscombinaties > Toegankelijkheid: bind 'Keer kleuren om' op cmd + q
+Systeeminstellingen > Toetsenbord > Toetscombinaties > Spotlight > Toon Spotlight-zoekveld: Uit
 
-### Taalvoorkeuren
+Log in via GitHub
 
-Open Systeemvoorkeuren > Taal en regio > Voorkeurstalen: voeg Dvorak toe.
+### Visual Studio Code
 
-### Spaces
+Login VSCode om settings te synchroniseren.
 
-Open Systeemvoorkeuren > Bureaublad en Dock > 'Orden spaces automatisch'
+Login via GitHub.
+
+### Warp
+
+Appearance > Theme: Gruvbox Dark
+
+Log in via GitHub

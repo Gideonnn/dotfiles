@@ -13,10 +13,11 @@ sudo softwareupdate -i --verbose
 xcode-select --install
 sudo xcode-select --switch /Library/Developer/CommandLineTools
 
-# Create project folders
+# Create project folder (if it doesn't exist)
 mkdir -p ~/git/work
 
 # Create vim swap file directories
+rm -rf ~/.vim
 mkdir ~/.vim
 touch ~/.vim/backup
 touch ~/.vim/swap

@@ -1,6 +1,8 @@
 # Misc
 ls='ls --color=tty'
 grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
+ip='echo "Local IP: $(ipconfig getifaddr en0)" && echo "Public IP: $(curl -s https://ipinfo.io/ip)"'
+
 
 # Navigation aliasses
 alias ..='cd ..'
@@ -34,7 +36,7 @@ alias dcd="docker-compose down"
 alias gs="git status"
 alias gl="git log"
 alias ga="git add"
-alias gd="git diff -- ':!package-lock.json' ':!yarn.lock'"
+alias gd="setopt local_options noglob; git diff -- ':!package-lock.json' ':!yarn.lock'"
 alias gdc="git diff --cached -- ':!package-lock.json' ':!yarn.lock'"
 alias gaa="git add -A"
 alias gal="git add ."

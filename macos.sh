@@ -3,22 +3,10 @@
 # Ask for the administrator password upfront.
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-COMPUTERNAME="Gideon's MacBook Pro"
-COMPUTERNAME_SIMPLE="Gideons-MacBook-Pro"
-
-# Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "$COMPUTERNAME"
-sudo scutil --set HostName "$COMPUTERNAME"
-sudo scutil --set LocalHostName "$COMPUTERNAME_SIMPLE"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTERNAME"
-
 # Set sleep delays (in minutes)
 sudo pmset -a displaysleep 0
-sudo pmset -a disksleep 0
 sudo pmset -a sleep 0
+sudo pmset -a disksleep 0
 
 # Remove default public folder
 sudo rm -rf ~/Public

@@ -3,9 +3,6 @@
 # Install pure (https://github.com/sindresorhus/pure)
 npm i -g pure-prompt
 
-# Development
-npm i -g prettier
-npm i -g yarn
-
-# Utils
-npm i -g trash-cli
+# Util for automatic version bumping
+# Example: bump patch && git add . && git commit -m "Bump version to $(cat ./package.json | jq -r .version)";
+npm i -g version-bump-prompt

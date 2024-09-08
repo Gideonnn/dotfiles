@@ -22,10 +22,13 @@
   aud = !git ls-files -v | grep "^[[:lower:]]"
 
 [init]
-  defaultBranch = main
+  defaultBranch = master
 
 [merge]
   tool = code
 
 [mergetool "code"]
   cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+[core]
+	excludesfile = /Users/gideon/git/dotfiles/.gitignore

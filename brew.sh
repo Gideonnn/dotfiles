@@ -24,34 +24,45 @@ brew install git-extras
 
 # Install nvm
 brew install nvm && mkdir ~/.nvm
+nvm install node # latest version
+
+# Command line tools
+brew install ffmpeg
+brew install trash-cli
 
 # Messaging
 brew install --cask telegram
 brew install --cask whatsapp
 brew install --cask slack
+brew install --cask discord
 
 # Development
 brew install --cask visual-studio-code
-brew install --cask insomnia-designer
 brew install --cask docker
-brew install --cask mongodb-compass
+brew install --cask warp
+brew install jq
 
 # Browsers
 brew install --cask google-chrome
 brew install --cask firefox
+brew install --cask arc
+
+# Gaming
+brew install --cask whisky
+brew install --cask steam
 
 # Misc
+brew install --cask raycast
 brew install --cask spotify
-brew install --cask iterm2
 brew install --cask imageoptim
 brew install --cask disk-inventory-x
-brew install --cask chrysalis
-brew install --cask hammerspoon
+brew install --cask bitwarden
+brew install --cask raspberry-pi-imager
 
-# Nerd fonts
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font
-brew untap homebrew/cask-fonts
+# Keyboard
+brew install --cask hyperkey
+brew install --cask keymapp
+brew install --cask macmediakeyforwarder
 
 # Remove outdated versions from the cellar.
 brew cleanup
