@@ -53,6 +53,7 @@ brew install --cask whisky
 brew install --cask steam
 
 # Misc
+brew install openjdk
 brew install --cask raycast
 brew install --cask spotify
 brew install --cask imageoptim

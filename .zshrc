@@ -32,6 +32,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+# Java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 # Coreutil's bin folder
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
