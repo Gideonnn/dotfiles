@@ -28,6 +28,7 @@ nvm install node # latest version
 
 # Command line tools
 brew install ffmpeg
+brew install imagemagick
 brew install trash-cli
 
 # Messaging
@@ -58,6 +59,8 @@ brew install --cask imageoptim
 brew install --cask disk-inventory-x
 brew install --cask bitwarden
 brew install --cask raspberry-pi-imager
+brew install --cask transmission
+brew install --cask vlc
 
 # Keyboard
 brew install --cask hyperkey
