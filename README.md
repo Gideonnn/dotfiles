@@ -51,7 +51,7 @@ ssh-add ~/.ssh/id_ed25519
 Copy the personal key to clipboard:
 
 ```
-pbcopy < ~/.ssh/id_rsa.pub
+pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 Go to [GitHub](https://github.com/settings/keys) and add the key to SSH keys
