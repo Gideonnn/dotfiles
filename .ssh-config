@@ -1,4 +1,8 @@
+Host metronix.nl
+  HostName metronix.nl
+  User root
+
 Host github.com
-HostName github.com
-IdentityFile ~/.ssh/id_ed25519
+  HostName github.com
+  IdentityFile ~/.ssh/id_ed25519
 

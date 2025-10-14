@@ -1,5 +1,29 @@
 # Installing macOS for development
 
+## Backup old stuff first
+
+### Copy to backup folder
+```bash
+cp ~/.zsh_history ~/backup/.zsh_history
+cp ~/.bash_history ~/backup/.bash_history
+cp -r ~/.ssh ~/backup/.ssh
+```
+
+### Restore from backup folder
+```bash
+cp ~/backup/.zsh_history ~/.zsh_history
+cp ~/backup/.bash_history ~/.bash_history
+cp -r ~/backup/.ssh ~/.ssh
+```
+
+### Set proper permissions
+```bash
+chmod 600 ~/.zsh_history
+chmod 600 ~/.bash_history
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+```
+
 ## XCode Command Line Tools
 
 Open a terminal and run the following command:
