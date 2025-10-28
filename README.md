@@ -158,16 +158,6 @@ Toetscombinaties > Zet zo veel mogelijk shortcuts uit
 
 ## App Settings
 
-### Arc
-
-Voeg Bitwarden extensie toe
-
-Profiles > Search engine: DuckDuckGo
-Profiles > Archive tabs after: 30 days
-Advanced > More settings > Automatisch invullen en wachtwoorden > Wachtwoordmanager:
-- Aanbieden om wachtwoorden op te slaan: uit
-- Automatisch inloggen: uit
-
 ### Bitwarden
 
 Open and log into Bitwarden
