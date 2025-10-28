@@ -50,7 +50,6 @@ brew install --cask claude-code
 # Browsers
 brew install --cask google-chrome
 brew install --cask firefox
-brew install --cask arc
 
 # Gaming
 brew install --cask whisky
