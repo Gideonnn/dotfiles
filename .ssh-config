@@ -2,7 +2,10 @@ Host metronix.nl
   HostName metronix.nl
   User root
 
+Host 135.181.182.83
+  User metronix
+  IdentityFile ~/.ssh/id_ed25519_metronix
+
 Host github.com
   HostName github.com
   IdentityFile ~/.ssh/id_ed25519
-
