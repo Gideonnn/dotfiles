@@ -39,6 +39,8 @@ brew install --cask discord
 
 # Development
 brew install --cask visual-studio-code
+brew install --cask cursor
+brew install --cask zed
 brew install --cask docker
 brew install --cask warp
 brew install jq
@@ -50,6 +52,7 @@ brew install --cask claude-code
 # Browsers
 brew install --cask google-chrome
 brew install --cask firefox
+brew install --cask zen
 
 # Gaming
 brew install --cask whisky
