@@ -47,7 +47,6 @@ brew install jq
 
 # AI
 brew install --cask claude
-brew install --cask claude-code
 
 # Browsers
 brew install --cask google-chrome
