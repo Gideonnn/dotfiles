@@ -28,5 +28,8 @@ scratch/
 
 # AI
 .claude/
+.codex/
+.opencode/
+.open-code/
 CLAUDE.md
 WARP.md
