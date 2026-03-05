@@ -47,8 +47,8 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # Ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-for dir in /opt/homebrew/lib/ruby/gems/*/bin; do
-  [ -d "$dir" ] && export PATH="$dir:$PATH"
+for dir in /opt/homebrew/lib/ruby/gems/*/bin(N); do
+  export PATH="$dir:$PATH"
 done
 
 # Custom bin files
