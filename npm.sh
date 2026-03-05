@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 # Install pure (https://github.com/sindresorhus/pure)
 npm i -g pure-prompt

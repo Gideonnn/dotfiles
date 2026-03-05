@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 # Ask for the administrator password upfront.
 sudo -v
@@ -34,7 +35,7 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null || true
 
 # Stop iTerm from displaying 'Last login: <date>'
 touch ~/.hushlogin

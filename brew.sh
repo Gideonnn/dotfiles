@@ -1,9 +1,10 @@
 #!/bin/bash
+set -eo pipefail
 
 # Check for Homebrew, install if we don't have it
-if test ! $(which brew); then
+if ! command -v brew &>/dev/null; then
   echo "Homebrew is not installed. Please install it first"
-  return;
+  exit 1
 fi
 
 # Make sure we’re using the latest Homebrew.

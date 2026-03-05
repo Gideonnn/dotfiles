@@ -36,10 +36,10 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Coreutil's bin folder
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
 # Gnu-sed's bin folder
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Python (uv)
 eval "$(uv generate-shell-completion zsh)"
@@ -47,7 +47,9 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # Ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
+for dir in /opt/homebrew/lib/ruby/gems/*/bin; do
+  [ -d "$dir" ] && export PATH="$dir:$PATH"
+done
 
 # Custom bin files
 export PATH="/Users/gideon/git/dotfiles/bin:$PATH"
@@ -61,9 +63,16 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Misc
 export PATH="/Users/gideon/.local/bin:$PATH"
 
-# Nvm settings
+# NVM (lazy-loaded for faster shell startup)
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+lazy_load_nvm() {
+  unset -f nvm node npm npx
+  [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
+}
+nvm() { lazy_load_nvm && nvm "$@"; }
+node() { lazy_load_nvm && node "$@"; }
+npm() { lazy_load_nvm && npm "$@"; }
+npx() { lazy_load_nvm && npx "$@"; }
 
 # Load aliasses
 source ~/git/dotfiles/aliases.sh

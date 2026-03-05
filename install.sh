@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 # Ask for the administrator password upfront
 sudo -v
@@ -26,18 +27,18 @@ touch ~/.vim/backup
 touch ~/.vim/swap
 
 # Use symbolic links for dotfiles
-source ./symlinks.sh
+bash ./symlinks.sh
 
 # Apply system preferences
-source ./macos.sh
+bash ./macos.sh
 
-# Install Hombrew and apps
-source ./brew.sh
+# Install Homebrew and apps
+bash ./brew.sh
 
 # Install default npm packages
-source ./npm.sh
+bash ./npm.sh
 
 # Do other stuff
-source ./misc.sh
+bash ./misc.sh
 
 echo "Done, enjoy!"

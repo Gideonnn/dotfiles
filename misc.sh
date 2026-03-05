@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 # Install zsh plugins
 rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
