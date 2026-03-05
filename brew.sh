@@ -24,7 +24,9 @@ brew install git
 brew install git-extras
 
 # Install nvm
-brew install nvm && mkdir ~/.nvm
+brew install nvm && mkdir -p ~/.nvm
+export NVM_DIR=~/.nvm
+source "$(brew --prefix nvm)/nvm.sh"
 nvm install node # latest version
 
 # Python
