@@ -54,6 +54,14 @@ Install Oh-My-Zsh:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+## Claude Code
+
+Install Claude Code:
+
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
 ## SSH keys
 
 ```
