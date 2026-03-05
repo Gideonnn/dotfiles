@@ -41,8 +41,9 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Gnu-sed's bin folder
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-# Python stuff
-export PATH="/Users/gideon/Library/Python/2.7/bin:$PATH"
+# Python (uv)
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
 
 # Ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

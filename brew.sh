@@ -26,6 +26,9 @@ brew install git-extras
 brew install nvm && mkdir ~/.nvm
 nvm install node # latest version
 
+# Python
+brew install uv
+
 # Command line tools
 brew install ffmpeg
 brew install imagemagick
