@@ -44,6 +44,7 @@ brew install --cask zed
 brew install --cask docker
 brew install --cask warp
 brew install jq
+brew install lazygit
 
 # AI
 brew install --cask claude

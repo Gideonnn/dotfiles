@@ -1,0 +1,65 @@
+# Config relating to the Lazygit UI
+gui:
+  # The number of lines you scroll by when scrolling the main window
+  scrollHeight: 1
+
+  # The number of spaces per tab; used for everything that's shown in the main
+  # view, but probably mostly relevant for diffs.
+  # Note that when using a pager, the pager has its own tab width setting, so you
+  # need to pass it separately in the pager command.
+  tabWidth: 2
+
+  # If true, capture mouse events.
+  # When mouse events are captured, it's a little harder to select text: e.g.
+  # requiring you to hold the option key when on macOS.
+  mouseEvents: true
+
+  # Format used when displaying time e.g. commit time.
+  # Uses Go's time format syntax: https://pkg.go.dev/time#Time.Format
+  timeFormat: 02 Jan 2006
+
+  # Format used when displaying time if the time is less than 24 hours ago.
+  # Uses Go's time format syntax: https://pkg.go.dev/time#Time.Format
+  shortTimeFormat: 15:04
+
+# Periodic update checks
+update:
+  # One of: 'prompt' (default) | 'background' | 'never'
+  method: prompt
+
+  # Period in days between update checks
+  days: 14
+
+# Background refreshes
+refresher:
+  # File/submodule refresh interval in seconds.
+  # Auto-refresh can be disabled via option 'git.autoRefresh'.
+  refreshInterval: 10
+
+  # Re-fetch interval in seconds.
+  # Auto-fetch can be disabled via option 'git.autoFetch'.
+  fetchInterval: 60
+
+# If true, show a confirmation popup before quitting Lazygit
+confirmOnQuit: false
+
+# If true, exit Lazygit when the user presses escape in a context where there is
+# nothing to cancel/close
+quitOnTopLevelReturn: false
+
+# Config relating to things outside of Lazygit like how files are opened,
+# copying to clipboard, etc
+os:
+  # Command for editing a file. Should contain "{{filename}}".
+  edit: "cursor {{filename}}"
+
+  # Command for editing a file at a given line number. Should contain
+  # "{{filename}}", and may optionally contain "{{line}}".
+  editAtLine: "cursor {{filename}} --line {{line}}"
+
+  # Command for opening a file, as if the file is double-clicked. Should contain
+  # "{{filename}}", but doesn't support "{{line}}".
+  open: "cursor {{filename}}"
+
+# If true, don't display introductory popups upon opening Lazygit.
+disableStartupPopups: true

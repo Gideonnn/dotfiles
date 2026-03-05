@@ -25,3 +25,7 @@ ln -s ~/git/dotfiles/.hammerspoon ~/.hammerspoon
 # Warp
 rm -rf ~/.warp
 ln -s ~/git/dotfiles/.warp ~/.warp
+
+# Lazygit
+rm -rf ~/.config/lazygit
+ln -s ~/git/dotfiles/.config/lazygit ~/.config/lazygit
