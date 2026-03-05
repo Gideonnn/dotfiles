@@ -4,8 +4,8 @@
 [includeIf "gitdir:~/git/spierings_io/"]
   path = ~/git/dotfiles/.gitconfig-spierings_io
 
-[includeIf "gitdir:~/git/work/"]
-  path = ~/git/dotfiles/.gitconfig-work
+[includeIf "gitdir:~/git/glaspoort/"]
+  path = ~/git/dotfiles/.gitconfig-glaspoort
 
 [pull]
   rebase = true
