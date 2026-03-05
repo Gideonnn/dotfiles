@@ -29,3 +29,8 @@ ln -s ~/git/dotfiles/.warp ~/.warp
 # Lazygit
 rm -rf ~/.config/lazygit
 ln -s ~/git/dotfiles/.config/lazygit ~/.config/lazygit
+
+# Claude Code
+mkdir -p ~/.claude
+rm -rf ~/.claude/commands
+ln -s ~/git/dotfiles/.claude/commands ~/.claude/commands
