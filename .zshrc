@@ -44,8 +44,21 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # Python stuff
 export PATH="/Users/gideon/Library/Python/2.7/bin:$PATH"
 
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
+
 # Custom bin files
 export PATH="/Users/gideon/git/dotfiles/bin:$PATH"
+
+# Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Misc
+export PATH="/Users/gideon/.local/bin:$PATH"
 
 # Nvm settings
 export NVM_DIR=~/.nvm
