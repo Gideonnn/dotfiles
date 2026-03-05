@@ -12,11 +12,12 @@ sudo pmset -a disksleep 0
 # Remove default public folder
 sudo rm -rf ~/Public
 
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=%80
+# Disable the sound effects on boot (Apple Silicon compatible)
+sudo nvram StartupMute=%01
 
 # Disable the power chime (charger plug in sound)
-defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
+defaults write com.apple.PowerChime ChimeOnAllAdapters -bool false
+killall PowerChime 2>/dev/null || true
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -33,9 +34,6 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null || true
 
 # Stop iTerm from displaying 'Last login: <date>'
 touch ~/.hushlogin
