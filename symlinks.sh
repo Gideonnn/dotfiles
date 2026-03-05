@@ -10,6 +10,7 @@ rm -f ~/.gitignore
 ln -s ~/git/dotfiles/.gitignore ~/.gitignore
 
 # Ssh config
+mkdir -p ~/.ssh
 rm -f ~/.ssh/config
 ln -s ~/git/dotfiles/ssh-config ~/.ssh/config
 
@@ -30,6 +31,7 @@ rm -rf ~/.warp
 ln -s ~/git/dotfiles/.warp ~/.warp
 
 # Lazygit
+mkdir -p ~/.config
 rm -rf ~/.config/lazygit
 ln -s ~/git/dotfiles/.config/lazygit ~/.config/lazygit
 
