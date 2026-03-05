@@ -109,9 +109,33 @@ Check out these files and edit them accordingly:
 
 ## Systeminstellingen
 
+### Algemeen
+
+'Vul automatisch in' en wachtwoorden > Vul automatisch in: uit
+Configureer codes in > Bitwarden
+
+### Achtergrond
+
+Gebruikt Moneterey wallpaper met dark mode
+
+### Bureaublad en Dock
+
+Bureaublad en Stage manager > 'Klik op achtergrond on bureaublad te tonen': 'Alleen in Stage Manager'
+Mission Control > Zet 'Orden spaces automatisch op basis van meest recent gebruik' uit
+
+### Menubalk
+
+Spotlight > uit
+
+### Weergave
+
+Weergave > Donker
+Liquid Glass > Getint
+Thema > Antractiet
+
 ### Meldingen
 
-Messages > Toon voorvertoning: Nooit
+Berichten > Toon voorvertoning: Nooit
 Telegram > Toon voorvertoning: Nooit
 Whatsapp > Sta meldingen toe: Uit
 
@@ -119,50 +143,55 @@ Whatsapp > Sta meldingen toe: Uit
 
 Speel geluid af bij opstarten: uit
 
-### Bedieningspaneel
+### Toegangsscherm
 
-Spotlight > Toon niet in menubalk
+Schakel beeldscherm uit bij gebruik van batterij: Nooit
+Schakel beeldscherm uit bij gebruik van lichtnetadapter: Nooit
+Vraag om wachtwoord na: Meteen
 
-### Privacy en Beveiliging
+### Privacy en beveiliging
 
-Open Systeeminstellingen > Toegangsscherm > Schakel schermbeveiliging in: Nooit
-Open Systeeminstellingen > Toegangsscherm > Vraag om wachtwoord na: Meteen
+Filevault: Aan
 
-### Bureaublad en Dock
-
-Bureaublad en Stage manager > 'Klik op achtergrond on bureaublad te tonen': 'Alleen in Stage Manager'
-Mission Control > Zet 'Orden spaces automatisch op basis van meest recent gebruik' uit
-
-### Achtergrond
-
-Gebruikt Moneterey wallpaper met dark mode
-
-### Wachtwoorden
+### Touch ID en wachtwoord
 
 Wachtwoordopties > Vul wachtwoorden en passkeys automatisch in: uit
+Apple Watch gebruiken om te ontgrendelen: aan
 
 ### Internetaccounts
 
 Toevoegen van fastmail account:
-- Log in via Fastmail web > Settings > Password & Security > App Passwords > Add new app password
+- Log in via Fastmail web > Settings > Privacy en beveiliging > Verbonden apps > Nieuw app-wachtwoord
 - Email, Contacten & Agenda's > Wachtwoord genereren
 - Click 'Open dit configuratiebestand' en open het
-- Ga naar Systeeminstellingen > Privacy en Beveiliging > Profielen > Installeer Fastmail profiel
+- Ga naar Systeeminstellingen > Profiel gedownload > Installeer Fastmail profiel
 - Ga naar Internetaccounts en voeg correcte beschrijvingen toe
 
 ### Toetsenbord
 
-Invoerbronnen: Wijzig...
+Toetsrepeteertemp: Snel
+Repeteervertraging: Kort
+
+Druk op globe toets: Doe niets
+
+Toetscombinaties
+Alles uit behalve:
+ - Beeldscherm
+ - Schermafbeeldingen
+ - Toegankelijkheid > Keer kleuren om: cmd + q
+Speciale toetsen > remap Caps-Lock naar Escape.
+
+Tekstinvoer:
+Invoerbronnen: Wijzig... > Nederlands
+Nederlands > Wijzig...
 - Toon invoermenu in menubalk: Uit
 - Corrigeer spelling automatisch: Uit
 - Voorzie woorden automatisch van hoofdletters: Uit
 - Voeg punt toe via dubbele spatie: Uit
 - Spelling: Automatisch op taal
 - Gebruik slimme aanhaalingsteken en streepjes: Uit
-
-Toetscombinaties > Speciale toetsen: remap Caps-Lock naar Escape.
-Toetscombinaties > Toegankelijkheid: bind 'Keer kleuren om' op cmd + q
-Toetscombinaties > Zet zo veel mogelijk shortcuts uit
+- Voor dubbele aanhalingstekens: "
+- Voor enkele aanhalingstekens: '
 
 ## App Settings
 
@@ -176,18 +205,32 @@ Open Docker en log in met personal email
 
 ### Finder
 
-Finder > Voorkeuren > Algemeen > Toon in nieuwe finder-vensters: 'gideon'.
-Finder > Voorkeuren > Tags: Uncheck all.
-Finder > Voorkeuren > Geavanceerd > Zorg dat mappen bovenaan staan: 'In vensters bij sorteren op naam'.
-Finder > Voorkeuren > Geavanceerd > Bij het uitvoeren van een zoekopdracht: 'Zoek in huidige map'.
+Voorkeuren:
 
-Navigatiekolom finder venster:
+Algemeen > Toon in nieuwe Finder-vensters: 'gideon'.
 
+Navigatiekolom
 - AirDrop
 - Apps
 - Documenten
 - Downloads
 - Bureablad
+- gideon
+- git
+
+Geavanceerd
+Toon waarschuwing voor verwijderen vanaf iCloud Drive: uit
+Zorg dat mappen bovenaan staan > 'In vensters bij sorteren op naam': aan
+Bij het uitvoeren van een zoekopdracht > Zoek in huidige map
+
+Volgorde navigatiekolom:
+- iCloud Drive
+- Airdrop
+- Apps
+- Bureablad
+- Documenten
+- Downloads
+- Facturen
 - gideon
 - git
 
@@ -197,18 +240,40 @@ Open and log into Firefox to enable sync.
 
 ### Hyperkey
 
-Remap physical key to hyper key: right command.
-Launch on login: on
+Remap physical key to hyper key: globe
+Open on login: on
 Check for updates automatically: on
 Hide menu bar icon: on
 
 ### Raycast
 
-Open Raycast and follow setup import settings after.
-
-Systeeminstellingen > Toetsenbord > Toetscombinaties > Spotlight > Toon Spotlight-zoekveld: Uit
+Open Raycast and follow setup.
 
 Log in via GitHub
+
+AI > Disable
+
+Extensions > disable:
+- Browser
+- Clipboard History
+- Define word
+- Developer
+- MCP
+- Navigation
+- Quicklinks
+- Raycast
+- Raycast Focus
+- Raycast Notes
+- Raycast Settings
+- Raycast for Teams
+- Screenshots
+- Shortcuts
+- Snippets
+- Start Typing Practise
+- System
+- System Settings
+- Translate
+- Window Management
 
 ### Visual Studio Code
 
@@ -218,7 +283,25 @@ Login via GitHub.
 
 ### Warp
 
-Appearance > Theme: Gruvbox Dark
+AI:
+Active AI > Prompt suggestions: uit
+Active AI > Suggested code banners: uit
+Active AI > Shared block title generation: uit
+Input > Autodetect agent prompts in terminal input: uit
+Input > Autodetect terminal input commands in agent input: uit
+Input > Show input hint text: uit
+Input > Show agent tips: uit
+
+Code:
+Codebase indexing: uit
+
+Appearance:
+Tabs > show code review button: uit
+
+Features:
+Terminal input > 
+
+Zoek voor 'quick' > Global hotkey: Dicated hotkey window
 
 Log in via GitHub
 
@@ -229,3 +312,7 @@ Open Alt-Tab and follow the accessibility setup.
 Systeminstellingen > Toetsenbord > Toetscombinaties > Toetsenboard > Focus op volgende venster: uit
 
 Pas Sneltoets 1 en Sneltoets 2 aan naar cmd + tab en cmd + shift + tab.
+
+Sneltoets 1: Roomt ramen uit spaces: Zichtbare spaces
+Sneltoets 1: Toon verborgen ramen: Verberg
+Sneltoets 2: Roomt ramen uit spaces: Zichtbare spaces
