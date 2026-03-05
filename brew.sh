@@ -68,6 +68,7 @@ brew install --cask bitwarden
 brew install --cask raspberry-pi-imager
 brew install --cask transmission
 brew install --cask vlc
+brew install --cask alt-tab
 
 # Keyboard
 brew install --cask hyperkey

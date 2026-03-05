@@ -213,3 +213,11 @@ Login via GitHub.
 Appearance > Theme: Gruvbox Dark
 
 Log in via GitHub
+
+### Alt-Tab
+
+Open Alt-Tab and follow the accessibility setup.
+
+Systeminstellingen > Toetsenbord > Toetscombinaties > Toetsenboard > Focus op volgende venster: uit
+
+Pas Sneltoets 1 en Sneltoets 2 aan naar cmd + tab en cmd + shift + tab.
