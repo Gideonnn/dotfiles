@@ -32,3 +32,5 @@
 
 [core]
 	excludesfile = /Users/gideon/git/dotfiles/.gitignore
+[push]
+	useForceIfIncludes = true
