@@ -77,7 +77,7 @@ brew install --cask vlc
 brew install --cask alt-tab
 
 # Keyboard
-brew install --cask hyperkey
+brew install --cask karabiner-elements
 brew install --cask keymapp
 brew install --cask macmediakeyforwarder
 

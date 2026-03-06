@@ -35,6 +35,11 @@ mkdir -p ~/.config
 rm -rf ~/.config/lazygit
 ln -s ~/git/dotfiles/.config/lazygit ~/.config/lazygit
 
+# Karabiner Elements
+mkdir -p ~/.config
+rm -rf ~/.config/karabiner
+ln -s ~/git/dotfiles/.config/karabiner ~/.config/karabiner
+
 # Claude Code
 mkdir -p ~/.claude
 rm -rf ~/.claude/commands
