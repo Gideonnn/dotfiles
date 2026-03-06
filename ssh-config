@@ -9,3 +9,7 @@ Host 135.181.182.83
 Host github.com
   HostName github.com
   IdentityFile ~/.ssh/id_ed25519
+
+Host ssh.dev.azure.com
+  HostName ssh.dev.azure.com
+  IdentityFile ~/.ssh/rsa_glaspoort
