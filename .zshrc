@@ -63,16 +63,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Misc
 export PATH="/Users/gideon/.local/bin:$PATH"
 
-# NVM (lazy-loaded for faster shell startup)
+# NVM
 export NVM_DIR=~/.nvm
-lazy_load_nvm() {
-  unset -f nvm node npm npx
-  [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
-}
-nvm() { lazy_load_nvm && nvm "$@"; }
-node() { lazy_load_nvm && node "$@"; }
-npm() { lazy_load_nvm && npm "$@"; }
-npx() { lazy_load_nvm && npx "$@"; }
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"
 
 # Load aliasses
 source ~/git/dotfiles/aliases.sh
