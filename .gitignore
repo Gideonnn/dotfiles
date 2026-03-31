@@ -27,7 +27,6 @@ Thumbs.db
 scratch/
 
 # AI
-.claude/
 .codex/
 .opencode/
 .open-code/
