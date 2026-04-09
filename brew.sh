@@ -51,6 +51,7 @@ brew install --cask docker
 brew install --cask warp
 brew install jq
 brew install lazygit
+brew install uv
 
 # AI
 brew install --cask claude

@@ -51,6 +51,10 @@ for dir in /opt/homebrew/lib/ruby/gems/*/bin(N); do
   export PATH="$dir:$PATH"
 done
 
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Custom bin files
 export PATH="/Users/gideon/git/dotfiles/bin:$PATH"
 
@@ -62,6 +66,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Misc
 export PATH="/Users/gideon/.local/bin:$PATH"
+
+# Bun completions
+[ -s "/Users/gideon/.bun/_bun" ] && source "/Users/gideon/.bun/_bun"
 
 # NVM
 export NVM_DIR=~/.nvm
