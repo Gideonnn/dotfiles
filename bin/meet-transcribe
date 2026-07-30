@@ -1,0 +1,142 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Transcribe an audio file via the OpenAI audio-transcriptions API (fast, cloud).
+# Files over OpenAI's 25 MB upload cap are split into time-based chunks,
+# transcribed separately, and stitched back together.
+#
+# Usage:  meet-transcribe [-d|--diarize] <audio-file>
+# Writes: <audio-file-without-ext>.txt
+#
+# Flags:
+#   -d, --diarize   label speakers (gpt-4o-transcribe-diarize, ~2.5x cost)
+#
+# Env:
+#   MEET_LANG       language hint       (default: nl)
+#   MEET_DIARIZE=1  same as --diarize   (inherited from meet/meet-notes)
+#   MEET_STT_MODEL  override the model explicitly
+#   OPENAI_API_KEY  required -- shell, or the .env next to this script
+
+meet_bin="$(cd "$(dirname "$0")" && pwd -P)"
+. "${meet_bin}/meet-lib.sh"
+
+MEET_LANG="${MEET_LANG:-nl}"
+
+# Leading -d/--diarize flag → MEET_DIARIZE.
+if [ "${1:-}" = "-d" ] || [ "${1:-}" = "--diarize" ]; then
+  MEET_DIARIZE=1; shift
+fi
+
+meet_load_env
+meet_require_key
+
+if [ "${MEET_DIARIZE:-}" = "1" ]; then
+  STT_MODEL="${MEET_STT_MODEL:-gpt-4o-transcribe-diarize}"
+else
+  STT_MODEL="${MEET_STT_MODEL:-gpt-4o-transcribe}"
+fi
+
+audio="${1:?Usage: meet-transcribe [-d] <audio-file>}"
+[ -f "$audio" ] || { echo "No such file: $audio" >&2; exit 1; }
+
+base="${audio%.*}"
+txt="${base}.txt"
+
+# Two caps to respect per request:
+#   - size:     25 MB (26,214,400 byte) upload limit
+#   - duration: gpt-4o-transcribe rejects audio longer than 1400 s (~23 min)
+UPLOAD_LIMIT=25000000     # single-shot size threshold
+CHUNK_TARGET=23000000     # aim per chunk when splitting (byte headroom)
+MAX_CHUNK_SEC=1200        # duration ceiling per chunk (under the 1400 s model cap)
+
+# Transcribe one file and print the transcript text to stdout.
+# Status goes to stderr so it doesn't pollute the captured transcript.
+transcribe_one() {
+  local file="$1" resp
+  case "$STT_MODEL" in
+    *diarize*)
+      if resp="$(curl -sS --fail-with-body https://api.openai.com/v1/audio/transcriptions \
+            -H "Authorization: Bearer ${OPENAI_API_KEY}" \
+            -F "file=@${file}" \
+            -F "model=${STT_MODEL}" \
+            -F "language=${MEET_LANG}" \
+            -F "chunking_strategy=auto" \
+            -F "response_format=diarized_json")"; then
+        local out; out="$(printf '%s' "$resp" | jq -r '.segments[] | "\(.speaker): \(.text)"')"
+        if [ -z "$out" ]; then
+          echo "⚠  Lege transcriptie — onverwacht diarize-antwoord:" >&2
+          printf '%s\n' "$resp" | head -c 2000 >&2
+          return 1
+        fi
+        printf '%s\n' "$out"
+      else
+        echo "OpenAI API error:" >&2; printf '%s\n' "$resp" >&2; return 1
+      fi
+      ;;
+    *)
+      if resp="$(curl -sS --fail-with-body https://api.openai.com/v1/audio/transcriptions \
+            -H "Authorization: Bearer ${OPENAI_API_KEY}" \
+            -F "file=@${file}" \
+            -F "model=${STT_MODEL}" \
+            -F "language=${MEET_LANG}" \
+            -F "response_format=text")"; then
+        printf '%s\n' "$resp"
+      else
+        echo "OpenAI API error:" >&2; printf '%s\n' "$resp" >&2; return 1
+      fi
+      ;;
+  esac
+}
+
+# OpenAI caps uploads at 25 MB, so compress to mono AAC (~0.36 MB/min) first.
+work="$(mktemp -d -t meet-XXXXXX)"
+trap 'rm -rf "$work"' EXIT
+comp="${work}/audio.m4a"
+
+echo "⏳ Compressing for upload ..."
+ffmpeg -hide_banner -loglevel error -y -i "$audio" \
+  -ac 1 -ar 16000 -c:a aac -b:a 48k "$comp"
+
+size="$(meet_bytes "$comp")"
+dur="$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$comp")"
+dur_int="${dur%.*}"; dur_int="${dur_int:-0}"
+[ "$dur_int" -gt 0 ] || { echo "Could not read audio duration." >&2; exit 1; }
+
+if [ "$size" -le "$UPLOAD_LIMIT" ] && [ "$dur_int" -le "$MAX_CHUNK_SEC" ]; then
+  echo "⏳ Transcribing via OpenAI (${STT_MODEL}) ..."
+  transcribe_one "$comp" > "$txt"
+  echo "✅ Transcript${MEET_DIARIZE:+ (met sprekers)}: ${txt}"
+  exit 0
+fi
+
+# Over the size or duration cap → split by time. Chunk length must satisfy
+# both: fit in CHUNK_TARGET bytes AND stay under the model's duration cap.
+bps=$(( size / dur_int ))
+[ "$bps" -gt 0 ] || bps=6000
+chunk_sec=$(( CHUNK_TARGET / bps ))
+[ "$chunk_sec" -le "$MAX_CHUNK_SEC" ] || chunk_sec=$MAX_CHUNK_SEC
+[ "$chunk_sec" -ge 60 ] || chunk_sec=60          # never smaller than a minute
+n_chunks=$(( (dur_int + chunk_sec - 1) / chunk_sec ))
+
+echo "ℹ  ~$((size/1000000)) MB / $((dur_int/60)) min is over an upload cap."
+echo "   Splitting into ${n_chunks} chunks of ~$((chunk_sec/60)) min and transcribing each."
+
+: > "$txt"
+i=0; ss=0
+while [ "$ss" -lt "$dur_int" ]; do
+  part="${work}/part.m4a"
+  # -ss before -i = fast seek; AAC frames are all keyframes so cuts are clean.
+  ffmpeg -hide_banner -loglevel error -y -ss "$ss" -t "$chunk_sec" -i "$comp" \
+    -c copy "$part"
+  i=$(( i + 1 ))
+  echo "⏳ Transcribing chunk ${i}/${n_chunks} via OpenAI (${STT_MODEL}) ..." >&2
+  if [ "$i" -gt 1 ]; then printf '\n' >> "$txt"; fi
+  transcribe_one "$part" >> "$txt"
+  ss=$(( ss + chunk_sec ))
+done
+
+if [ ! -s "$txt" ]; then
+  echo "⚠  Lege transcriptie na chunking." >&2
+  exit 1
+fi
+echo "✅ Transcript${MEET_DIARIZE:+ (met sprekers)}: ${txt}"

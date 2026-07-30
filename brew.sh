@@ -37,6 +37,10 @@ brew install ffmpeg
 brew install imagemagick
 brew install trash-cli
 
+# Meeting recorder (bin/meet): loopback device for capturing call audio.
+# The aggregate input device on top of it is manual, see README.
+brew install --cask blackhole-2ch
+
 # Messaging
 brew install --cask telegram
 brew install --cask whatsapp

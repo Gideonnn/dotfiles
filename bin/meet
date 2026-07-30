@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Record a meeting, then transcribe + summarise it (via meet-notes).
+# Audio capture stays local; transcription goes through the OpenAI API, the
+# summary through your local Claude CLI.
+#
+# Each meeting lands in its own dated folder:
+#   <meet-dir>/<date>_<name>/<date>_<name>.{wav,txt,md}
+#
+# The folder defaults to ~/meetings, except inside a git repo that already has a
+# meetings/ directory -- there it stays in-tree.
+#
+# Usage:
+#   meet [name]                 # default name: standup
+#   meet -o ~/work/notulen foo  # write to a specific folder
+#   meet -d [name]              # add speaker labels (diarize, ~2.5x cost)
+#   meet -t [name]              # let Claude read the repo for context
+#
+# Env:
+#   MEET_DIR       where dated folders are created (default: see above)
+#   MEET_DEVICE    avfoundation input name (default: Meet Input)
+#   OPENAI_API_KEY required -- shell, or the .env next to this script
+
+meet_bin="$(cd "$(dirname "$0")" && pwd -P)"
+. "${meet_bin}/meet-lib.sh"
+
+usage() { sed -n '4,26p' "$0" | sed 's/^# \{0,1\}//'; }
+
+out=""
+while [ $# -gt 0 ]; do
+  case "${1:-}" in
+    -d|--diarize) export MEET_DIARIZE=1; shift ;;
+    -t|--tools)   export MEET_NOTES_TOOLS=1; shift ;;
+    -o|--out)     out="${2:?-o needs a directory}"; shift 2 ;;
+    -h|--help)    usage; exit 0 ;;
+    --)           shift; break ;;
+    -*)           echo "Unknown flag: $1" >&2; usage >&2; exit 1 ;;
+    *)            break ;;
+  esac
+done
+
+MEET_DIR="${out:-$(meet_default_dir)}"
+export MEET_DIR
+DEVICE="${MEET_DEVICE:-Meet Input}"
+
+# Check the key and the input device before recording, not after: a 401 or a
+# missing device discovered afterwards costs you the meeting.
+meet_load_env
+[ "${MEET_NO_TRANSCRIBE:-}" = "1" ] || meet_require_key
+meet_require_device "$DEVICE"
+
+name="${1:-}"
+[ -z "$name" ] && read -r -p "Meeting-naam [standup]: " name
+name="${name:-standup}"
+
+date="$(date +%Y-%m-%d)"
+slug="${date}_${name}"
+dir="${MEET_DIR}/${slug}"
+# Don't clobber an existing same-day folder of the same name.
+if [ -e "$dir" ]; then
+  dir="${dir}_$(date +%H%M)"
+  slug="$(basename "$dir")"
+fi
+mkdir -p "$dir"
+wav="${dir}/${slug}.wav"
+
+echo
+echo "▶  Recording to ${wav}"
+echo "   Talk normally. Press Ctrl+C when the meeting is over."
+echo
+
+# ffmpeg records until SIGINT (Ctrl+C), which finalizes the WAV cleanly.
+# `|| true` keeps the script alive so transcription still runs after Ctrl+C.
+ffmpeg -hide_banner -loglevel warning \
+  -f avfoundation -i ":${DEVICE}" \
+  -ac 1 -ar 16000 "$wav" || true
+
+echo
+if [ "${MEET_NO_TRANSCRIBE:-}" = "1" ]; then
+  echo "✅ Audio saved (transcription skipped): ${wav}"
+else
+  "${meet_bin}/meet-notes" "$wav"
+fi
