@@ -37,3 +37,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTerm from displaying 'Last login: <date>'
 touch ~/.hushlogin
+
+# The meeting recorder's menu bar item lives in RecHoarder.app, which builds
+# itself on first run. `rechoarder menubar install` starts it at login; there is
+# nothing to configure from here.

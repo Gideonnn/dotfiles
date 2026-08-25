@@ -37,8 +37,10 @@ brew install ffmpeg
 brew install imagemagick
 brew install trash-cli
 
-# Meeting recorder (bin/meet): loopback device for capturing call audio.
-# The aggregate input device on top of it is manual, see README.
+# RecHoarder (~/git/rechoarder): loopback device for capturing call audio. The
+# aggregate and multi-output devices on top of it are built by
+# rechoarder-audio.swift at record time, so this is the only manual piece. The
+# menu bar lives in RecHoarder.app itself, so there is nothing else to install.
 brew install --cask blackhole-2ch
 
 # Messaging
@@ -79,7 +81,6 @@ brew install --cask bitwarden
 brew install --cask raspberry-pi-imager
 brew install --cask transmission
 brew install --cask vlc
-brew install --cask alt-tab
 
 # Keyboard
 brew install --cask karabiner-elements

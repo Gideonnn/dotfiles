@@ -57,6 +57,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Custom bin files
 export PATH="/Users/gideon/git/dotfiles/bin:$PATH"
+export PATH="/Users/gideon/git/rechoarder/bin:$PATH"
 
 # Java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
@@ -76,3 +77,6 @@ export NVM_DIR=~/.nvm
 
 # Load aliasses
 source ~/git/dotfiles/aliases.sh
+
+# Custom exports
+export CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1

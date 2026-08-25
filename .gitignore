@@ -23,12 +23,20 @@ Thumbs.db
 .s3cfg
 .aws/
 
+# Machine-specific ssh hosts: IPs, tailnet names, account names. Pulled in
+# by the tracked `ssh-config` via Include -- that file is PUBLIC, this one
+# must never be.
+.ssh-config
+
 # Repo scratch directory
 scratch/
 
+# Meeting recorder API key
+bin/.env
+
 # AI
-.codex/
-.opencode/
-.open-code/
-CLAUDE.md
-WARP.md
+# .codex/
+# .opencode/
+# .open-code/
+# CLAUDE.md
+# WARP.md
