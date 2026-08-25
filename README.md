@@ -125,7 +125,8 @@ so nothing breaks until you create it.
 Moved to its own repo: [RecHoarder](https://github.com/Gideonnn/rechoarder) —
 `~/git/rechoarder`.
 It records a call with both halves of the audio, transcribes it, and writes
-the notulen. Setup (PATH, the menu bar, BlackHole) is documented there.
+the notulen. It is a menu bar app now, not a script: `make run` in that repo
+builds it and puts it in the menu bar, so nothing here needs to be on `PATH`.
 
 ## Systeminstellingen
 
